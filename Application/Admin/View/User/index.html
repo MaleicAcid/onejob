@@ -1,0 +1,239 @@
+<extend name="Public/base" />
+
+
+{// 导航}
+<block name="breadcrumb">
+<li class="active">用户列表</li>
+</block>
+
+{// 左侧菜单}
+<block name="sidebar">
+	<include file="Public/sidebar" nav="user"/>
+</block>
+
+{// 主体}
+<block name="main">
+<div class="row-fluid">
+	<h3 class="header blue lighter smaller">
+		<button type="button" onclick="$.output_to_excel();" class="btn-out green btn btn-small pull-right"><i class=""></i >导出至Excel</button>
+		<form action="{:U('Admin/User/index')}" method="get">
+		<!--<div class="row-fluid  dataTables_wrapper">-->
+			<!--<div class="span4">-->
+				<!--&nbsp;-->
+			<!--</div>-->
+			<!--<div class="span8" id="m_search_div">-->
+				<!--<button type="submit" class="btn btn-primary btn-small pull-right" id="search_submit"><i class="icon-ok bigger-110"></i>筛选</button>-->
+				<!--<input name="username" value="{$map.username}" type="text" id="search_username" class="pull-right" placeholder="用户名"/>-->
+				<!--<label class="control-label pull-right">用户名：</label>-->
+			<!--</div>	-->
+		<!--</div>-->
+			<div class="clearfix">
+				学历：
+				<select class="edu" name="edu">
+					<option selected value>不筛选</option>
+					<foreach name="job_edu" item="v" key="k">
+						<option value="{$k}" name="edu">{$v}</option>
+					</foreach>
+				</select>
+				性别：
+				<select class="sex" name="sex">
+					<option selected value>不筛选</option>
+					<foreach name="user_sex" item="v" key="k">
+						<option value="{$k}" name="sex">{$v}</option>
+					</foreach>
+				</select>
+			</div>
+
+			<div class="clearfix">
+				<div class="clearfix">
+					<span style="float: left">入学年份(区间):</span>
+					<input style="float: left" name="entry_after" value="{$map.entry_after}" type="text" id="entry_after" class="pull-right" placeholder="起始年份"/>
+					<span style="float: left">~</span>
+					<input style="float: left" name="entry_before" value="{$map.entry_before}" type="text" id="entry_before" class="pull-right" placeholder="结束年份"/>
+				</div>
+
+				<div class="clearfix">
+					<span style="float: left">用户姓名:</span>
+					<input style="float: left" name="realname" value="{$map.realname}" type="text" id="realname" class="pull-right" placeholder="用户姓名"/>
+					<span style="float: left">学校:</span>
+					<input style="float: left" name="school" value="{$map.school}" type="text" id="school" class="pull-right" placeholder="学校"/>
+					<span style="float: left">专业:</span>
+					<input style="float: left" name="major" value="{$map.major}" type="text" id="major" class="pull-right" placeholder="专业"/>
+					<span style="float: left">手机号:</span>
+					<input style="float: left" name="tel" value="{$map.tel}" type="text" id="tel" class="pull-right" placeholder="手机号"/>
+					<button type="button" onclick="$.none_submit();" class="grey btn btn-small pull-right" id="none_submit"><i class=""></i>清空</button>
+					<button type="submit" class="btn btn-primary btn-small pull-right" id="search_submit"><i class="icon-ok bigger-110"></i>筛选</button>
+				</div>
+			</div>
+
+		<!--<div class="clearfix">-->
+
+		<!--</div>-->
+		</form>
+	</h3>
+	<div class="table-header">用户列表</div>
+	<div class="dataTables_wrapper" role="grid">
+		<table id="user_table" class="table table-striped table-bordered table-hover" style="margin-bottom:0px;">
+			<thead>
+				<tr>
+					<th class="center">
+						<label>
+							<input type="checkbox" class="ace" />
+							<span class="lbl"></span>
+						</label>
+					</th>
+					<th>id</th>
+					<th width="6%">用户头像</br>(可点击查看)</th>
+					<th>用户姓名</th>
+					<!--<th>类型</th>-->
+					<th>性别</th>
+					<th class="hidden-phone">
+						<i class="icon-time bigger-110 hidden-phone"></i>
+						学历
+					</th>
+					<th>学校</th>
+					<th>专业</th>
+					<th>手机号</th>
+					<th>入学年份</th>
+					<th class="hidden-480">状态</th>
+					<th class="hidden-480">操作</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<foreach name="data" item="value">	
+					<tr>
+						<td class="center">
+							<label>
+								<input type="checkbox" class="ace" />
+								<span class="lbl"></span>
+							</label>
+						</td>
+						<td>{$value.id}</td>
+						<td>
+						<span data-original-title="个人资料" data-rel="popover" class="tooltip-info" data-content="姓名：{$value.realname}<br/>性别：{$value.sex}<br/>学校：<b class='orange'>{$value.school}</b><br/>专业：{$value.major}<br/>学历：{$value.edu}<br/>入学年份：{$value.entry_year}<br/>绑定手机：{$value.tel}<br/>">
+							<?php if (empty($value['head_pic'])): ?>
+							<?php $value['head_pic'] = '/Public/Assets/images/dimg.jpg'; ?>
+							<?php endif ?>
+							<img src="{$value.head_pic|get_img}" style="width:45px;height:45px;cursor:pointer;">
+						</span>
+						</td>
+						<td>{$value.realname}</td>
+						<!--<td class="hidden-480">-->
+							<!--<?php echo C('user_type')[$value['type']] ?>-->
+						<!--</td>-->
+						<td>{$value.sex}</td>
+						<td class="hidden-phone">{$value.edu}</td>
+						<td class="hidden-phone">{$value.school}</td>
+						<td>{$value.major}</td>
+						<td>{$value.tel}</td>
+						<td>{$value.entry_year}</td>
+						<td class="hidden-480">
+							<?php echo C('user_state')[$value['state']] ?>
+						</td>
+						<td>
+							<div class="hidden-phone visible-desktop action-buttons">
+								<a href="javascript:;" onclick="$.lagou.formShow('{:U('Admin/User/edit', array('id'=>$value['id']))}');" class="green" data-rel="tooltip" data-original-title="编辑信息">
+									<i class="icon-pencil bigger-130"></i>
+								</a>
+
+								<a href="javascript:;" onclick="$.del('{:U('Admin/User/delete', array('id'=>$value['id']))}');" class="red" data-rel="tooltip" data-original-title="删除用户">
+									<i class="icon-trash bigger-130"></i>
+								</a>
+							</div>
+						</td>
+					</tr>
+				</foreach>
+			</tbody>
+		</table>
+		<!-- 分页 -->
+		<div class="row-fluid">
+			<div class="page">{$page}</div>
+		</div>
+	</div>
+
+</div>
+</block>
+
+{// js}
+<block name="js">
+<script type="text/javascript">
+	
+
+	function setSelect() {
+	    var sex = "{$map.sex}";
+	    var edu = "{$map.edu}";
+	    if(sex != ''){
+            $(".sex").val(sex);
+		}
+        if(edu != ''){
+            $(".edu").val(edu);
+        }
+
+    }
+        jQuery(function($) {
+            setSelect();
+			// 这就是全选按钮
+			$('table th input:checkbox').on('click' , function(){
+				var that = this;
+				$(this).closest('table').find('tr > td:first-child input:checkbox')
+				.each(function(){
+					this.checked = that.checked;
+					$(this).closest('tr').toggleClass('selected');
+				});	
+			});
+
+			$.extend({
+
+				action : function(url, obj)
+				{
+					var obj = $(obj).parents('form');
+
+					$.ajax({
+						url : url,
+						type : 'post',
+						data : obj.serialize(),
+						success : function(res)
+						{
+							$.lagou.alert(res.msg, res.code, 2);
+							$.lagou.formHide();
+							location.reload();
+						}
+					});
+				},
+
+				del : function(url)
+				{
+                    $.lagou.confirm('确认删除该用户么？', function(res){
+                        if (res) {
+                            $.ajax({
+                                url: url,
+                                type: 'get',
+                                success: function (res) {
+                                    $.lagou.alert(res.msg, res.code, 2);
+                                    if(res.code == 1){
+                                        location.reload();
+									}
+                                }
+                            });
+                        }
+                    });
+				},
+
+                none_submit : function()
+                {
+                    window.location.href="{:U('User/index')}";
+                },
+
+                output_to_excel : function()
+                {
+                    window.location.href="{:U('User/output_to_excel')}";
+                }
+
+
+
+			});
+        });
+
+	</script>
+</block>

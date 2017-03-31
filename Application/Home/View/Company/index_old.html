@@ -1,0 +1,282 @@
+
+    <div class="main">
+        <div class="information">
+            <div class="information-subNav">
+                <ul>
+                    <li class="select"><i class=" icon-user-1"></i>企业资料</li>
+                    <li><i class="icon-window"></i>职位管理</li>
+                    <li><i class="icon-heart-empty"></i>我的收藏</li>
+                    <li><i class="icon-lock-7"></i>企业认证</li>
+                    <li><i class="icon-database-2"></i>积分中心</li>
+                    <li><i class="icon-wallet"></i>钱包中心</li>
+                </ul>
+            </div>
+            <!--<div style="clear: both"></div>-->
+            <div class="information-content" style="overflow: hidden;height: auto;padding-bottom: 20px;">
+                <div class="data">
+                    <span>个人资料</span>
+                </div>
+                <div class="data-content">
+                    <div class="basicInformation">
+                        <div>
+                            <img src="{$company['logo']}" alt="" width="70" height="70">
+                            <img src="{$Think.config.IMG_URL}level.png" alt="" class="level">
+                            <p><span>{$company['name']}</span><br></p>
+                            <div class="C-edit">
+                            	<span class="C-pic">
+                            		<img src="{$Think.config.IMG_URL}editor.png" alt="" class="editor">
+                            	</span>
+                                <a>编辑</a>
+                            </div>
+                        </div>
+
+                        <!--<div class="com-manage">-->
+                            <!--<span><i class=" icon-user-7"></i><input type="text" value="{$company['short_name']}" disabled="disabled"/></span>-->
+                            <!--<span><i class=" icon-phone-outline"><input type="text" value="{$company['tel']}" disabled="disabled"/></i></span>-->
+                            <!--<span><i class="  icon-mail"></i><input type="text" value="{$company['email']}" disabled="disabled"/></span>-->
+                            <!--<span><i class=" icon-address-1"></i><input type="text" value="{$company['trade']}" disabled="disabled"/></span>-->
+                            <!--<span><i class=" icon-doc-text-2"></i><input type="text" value="{$company['invest']}" disabled="disabled"/></span>-->
+                            <!--<span><i class="icon-users-outline"></i><input type="text" value="{$company['scale']}" disabled="disabled"/></span>-->
+                            <!--<span><i class="icon-location-outline"></i><input type="text" value="{$company['city']}" disabled="disabled"/></span>-->
+                        <!--</div>-->
+                        <div class="com-manage">
+                            <span><i class=" icon-user-7"></i><input type="text" value="{$company['short_name']}" disabled="disabled"/></span>
+                            <span><i class="  icon-mail"></i><input type="text" value="{$company['email']}" disabled="disabled"/></span>
+                            <span><i class=" icon-address-1"></i><input type="text" value="{$company['trade']}" disabled="disabled"/></span>
+                            <span><i class=" icon-doc-text-2"></i><input type="text" value="{$company['invest']}" disabled="disabled"/></span>
+                            <span><i class="icon-users-outline"></i><input type="text" value="{$company['scale']}" disabled="disabled"/></span>
+                            <span><i class="icon-location-outline"></i><input type="text" value="{$company['address']}" disabled="disabled"/></span>
+                            <span style="width: 25%;"><i class=" icon-phone-outline"><input type="text" value="{$company['tel']}" disabled="disabled"/></i></span>
+                            <div class="Chorder-yanzhengma">
+                                <input type="text" />
+                                <a href="##">发送验证码</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="open-position">
+                        <ul>
+                            <li>
+                                <p class="n">5</p>
+                                <p>已发布职位</p>
+                                <p class="new">一键发布</p>
+                            </li>
+                            <li>
+                                <p class="n">...</p>
+                                <p>浏览人数</p>
+                            </li>
+                            <li>
+                                <p class="n">...</p>
+                                <p>浏览高校</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--<div style="clear: both"></div>-->
+                </div>
+                <div class="C-list">
+                    <ul id="add-content">
+                        <!--<li>-->
+                            <!--<a href="Position_management.html">-->
+                                <!--<p>体验店课程——上海店</p>-->
+                                <!--<div class="C-listBox">-->
+                                    <!--<div class="C-classify">-->
+                                        <!--<i class=" icon-address-1"></i>-->
+                                        <!--<span>0</span>-->
+                                    <!--</div>-->
+                                    <!--<div class="C-classify">-->
+                                        <!--<i class=" icon-address-1"></i>-->
+                                        <!--<span>1</span>-->
+                                    <!--</div>-->
+                                    <!--<div class="C-classify">-->
+                                        <!--<i class=" icon-address-1"></i>-->
+                                        <!--<span>0</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<div class="C-offon">-->
+                                <!--<span></span>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+                <!--<div class="C-textarea">-->
+                    <!--<textarea placeholder="请输入" style=""></textarea>-->
+                    <!--<a href="##" class="animate-ok">确认</a>-->
+                <!--</div>-->
+                <!--<div style="clear: both"></div>-->
+            </div>
+        </div>
+    </div>
+    <include file="Public:footer" />
+</div>
+<script src="{$Think.config.JS_URL}jquery-3.1.0.js"></script>
+    <script>
+        function hide_or_show(obj) {
+            if(!$(obj).hasClass("C-off_hover")){
+                if(confirm("确定打开嘛？")){
+                    do_show($(obj).attr('data-jid'),obj)
+                }
+            }else{
+                if(confirm("确定关闭嘛？")){
+                    do_hide($(obj).attr('data-jid'),obj)
+                }
+            }
+        }
+
+        function do_show(jid,obj) {
+            var url = "{:U('Company/show_job')}";
+            $.ajax({
+                type : "get",
+                data : {'jid':jid},
+                url: url,
+                success: function(data)
+                {
+                    if(data.status == 1){
+                        $(obj).addClass("C-off_hover");
+                    }else{
+//                           $("#mycomment").append(data);
+//                            page++;
+                    }
+                }
+            });
+        }
+
+        function do_hide(jid,obj) {
+            var url = "{:U('Company/hide_job')}";
+            $.ajax({
+                type : "get",
+                data : {'jid':jid},
+                url: url,
+                success: function(data)
+                {
+                    if(data.status == 1){
+                        $(obj).removeClass("C-off_hover");
+                    }else{
+//                           $("#mycomment").append(data);
+//                            page++;
+                    }
+                }
+            });
+        }
+        $(function () {
+            $('.information-subNav li').click(function () {
+                $('.information-subNav li').removeClass('select');
+                $(this).addClass('select');
+            })
+
+            $(".click-textarea").click(function(){
+                $(".open-position").hide();
+                $(".C-list").hide();
+                $(".C-textarea").find("textarea").show();
+                $(".C-textarea").find("a").show();
+            });
+            $(".animate-ok").click(function(){
+                $(".open-position").show();
+                $(".C-list").show();
+                $(".C-textarea").find("textarea").hide();
+                $(".C-textarea").find("a").hide();
+            });
+
+
+            $(".C-edit a").click(function(){
+
+                if($(".C-edit a").html()=="编辑"){
+                    $(".com-manage").find("input").removeAttr("disabled").css("border","#ddd 1px solid");
+                    $(".C-edit a").html("保存");
+                }else{
+                    $(".C-edit a").html("编辑");
+                    $(".com-manage").find("input").attr("disabled","disabled").css("border","0");
+                }
+            });
+
+//            $(".C-offon span").click(function(){
+//                if(!$(this).hasClass("C-off_hover")){
+//                    if(confirm("确定打开嘛？")){
+//                        $(this).addClass("C-off_hover");
+//                    }
+//                }else{
+//                    if(confirm("确定关闭嘛？")){
+//                        $(this).removeClass("C-off_hover");
+//                    }
+//                }
+//            });
+
+        })
+    </script>
+    <script type="text/javascript">
+        var page = 1;
+        var reg ="no-ajax-content"; //匹配<p>标签判断获取的页面是否没有更多了
+        var newPage = true;
+        var url = "{:U('Company/get_company_job')}";
+        function get_company_job(){
+            //$('.get_more').show();
+            if(newPage){
+                $.ajax({
+                    type : "get",
+                    data : {'p':page,is_ajax:1},
+                    url: url,
+                    dataType:'html',
+                    success: function(data)
+                    {
+                        var tmp = data;
+                        if(data){
+                            //alert($(data).attr("id") );
+                            $("#add-content").append(data);
+                            page++;
+                            if(tmp.match(reg)){
+                                //如果是no-ajax-content则标记为false
+                                newPage = false;
+                            }
+                        }else{
+//                           $("#mycomment").append(data);
+//                            page++;
+                        }
+                    }
+                });
+            }
+
+        }
+        $(document).ready(function(){
+            get_company_job()
+
+        });
+        function getScrollTop(){
+            var scrollTop = 0, bodyScrollTop = 0, documentScrollTop = 0;
+            if(document.body){
+                bodyScrollTop = document.body.scrollTop;
+            }
+            if(document.documentElement){
+                documentScrollTop = document.documentElement.scrollTop;
+            }
+            scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+            return scrollTop;
+        }
+        //文档的总高度
+        function getScrollHeight(){
+            var scrollHeight = 0, bodyScrollHeight = 0, documentScrollHeight = 0;
+            if(document.body){
+                bodyScrollHeight = document.body.scrollHeight;
+            }
+            if(document.documentElement){
+                documentScrollHeight = document.documentElement.scrollHeight;
+            }
+            scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight;
+            return scrollHeight;
+        }
+        //浏览器视口的高度
+        function getWindowHeight(){
+            var windowHeight = 0;
+            if(document.compatMode == "CSS1Compat"){
+                windowHeight = document.documentElement.clientHeight;
+            }else{
+                windowHeight = document.body.clientHeight;
+            }
+            return windowHeight;
+        }
+        window.onscroll = function(){
+            if(getScrollTop() + getWindowHeight() == getScrollHeight()){
+                get_company_job();
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,362 @@
+
+    <div class="main">
+        <div class="information">
+
+            <div class="information-subNav">
+                <ul>
+                    <a href="{:U('Company/index')}"><li onclick="showDetail()"><i class=" icon-user-1"></i>企业资料</li></a>
+                    <li class="click-textarea"><i class="icon-wallet"></i>企业介绍</li>
+                    <a href="{:U('Company/add_job')}"><li class="select"><i class="icon-window"></i>职位管理</li></a>
+                    <li><i class="icon-heart-empty"></i>我的收藏</li>
+                    <if condition="($company['state'] eq 1)">
+                        <a href="{:U('Company/show_identity')}"><li class="Enterprise-menu"><i class="icon-vimeo"></i>认证成功</li></a>
+                        <else />
+                        <a href="{:U('Company/show_identity')}"><li class="Enterprise-menu"><i class="icon-lock-7"></i>企业认证</li></a>
+                    </if>
+                    <li><i class="icon-database-2"></i>积分中心</li>
+                    <li><i class="icon-wallet"></i>钱包中心</li>
+
+                </ul>
+            </div>
+            <!--<div style="clear: both"></div>-->
+            <div class="information-content" style="overflow: hidden;height: auto;padding-bottom: 20px;">
+                <div class="data">
+                    <span>编辑职位</span>
+                </div>
+
+                <div class="data-content">
+                    <div class="basicInformation">
+                        <div >
+                            <img src="{$company['logo']}" id="imghead" border="0" alt="" width="70" height="70" style="border-radius: 50%;"/>
+                            <!--<input id="upload" style="display: none;" type="file" accept="image/gif,image/jpg,images/png;" />-->
+                        	
+                            <img src="{$Think.config.IMG_URL}level.png" alt="" class="level">
+                            <p><input type="text" id="c_name" name="c_name" value="{$company['name']}" disabled="disabled" class="company-name" style="border: none; background: none;"/></p>
+                            <!--<div class="C-edit">-->
+                            	<!--<span class="C-pic">-->
+                            		<!--<img src="{$Think.config.IMG_URL}editor.png" alt="" class="editor">-->
+                            	<!--</span>-->
+                            	<!--<a>编辑</a>-->
+                            <!--</div>-->
+                        </div>
+
+                        <div class="com-manage">
+                            <span><i class=" icon-user-7"></i><input type="text" id="short_name" value="{$company['short_name']}" disabled="disabled"/></span>
+                            <span><i class=" icon-phone-outline"><input type="text" id="tel" value="{$company['tel']}" disabled="disabled"/></i></span>
+                            <span><i class="  icon-mail"></i><input type="text" id="email" value="{$company['email']}" disabled="disabled"/></span>
+                            <span><i class=" icon-address-1"></i><input type="text" id="trade" value="{$company['trade']}" disabled="disabled"/></span>
+                            <span  >
+                                <i class=" icon-doc-text-2"></i>
+                                <select class="study" style="display: none" id="invest">
+                                    <foreach name="invest" item="v" >
+                                        <option>{$v}</option>
+                                     </foreach>
+                                </select>
+                                <span class="info-value">{$company['invest']}</span>
+                            </span>
+                            <!--<span class="info-value">{$user_info['sex']}</span>                            -->
+                            <span class="study">
+                                <i class="icon-users-outline"></i><select class="study" style="display: none" id="scale">
+                                <foreach name="scale" item="v" >
+                                    <option>{$v}</option>
+                                </foreach>
+                            </select>
+                                <span style="display:inline" class="info-value">{$company['scale']}</span>
+                            </span>
+                            <span><i class="icon-location-outline"></i><input type="text" id="address" value="{$company['address']}" disabled="disabled"/></span>
+                        </div>
+                    </div>
+                </div>
+
+		        <div class="C-position">
+                    <form id="identityAuth" action="">
+                        <div class="C-position-Box">
+                            职位名称:
+                            <div  style="float: left"  class="C-position-name" >
+                                <input type="hidden" name="jid" value="{$job['jid']}"/>
+                                <input style="float: left" type="text" name="name" style="width: 90px;height: 29px;vertical-align: baseline;" value="{$job['name']}" placeholder="职位名" disabled="disabled"/>
+                                <input id="upload" style="display: none;" name="logo" type="file" accept="image/jpg,images/png;" />
+                            </div>
+                            <div class="C-position-Record">
+                                <ul>
+                                    <!--<li>-->
+                                        <!--<i class="icon-location-outline"></i>-->
+                                        <!--<input type="text" name="edu" value="{$job['edu']}" placeholder="学历要求" disabled="disabled"/>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                        <!--<i class="icon-location-outline"></i>-->
+                                        <!--<input type="text" name="work_year" value="{$job['work_year']}" placeholder="工作经验" disabled="disabled"/>-->
+                                    <!--</li>-->
+                                    <li>学历：
+                                        <select name="edu" required>
+                                            <foreach name="edu" item="v" >
+                                                <option>{$v}</option>
+                                            </foreach>
+                                        </select>
+                                    </li>
+                                    <li>经验：
+                                        <select name="work_year" required>
+                                            <foreach name="work_year" item="v" >
+                                                <option>{$v}</option>
+                                            </foreach>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <!--<i class="icon-location-outline"></i>-->
+                                        月薪下限:
+                                        <input type="text" name="salary_low" style="width: 90px;height: 29px;vertical-align: baseline;" value="{$job['salary_low']}" disabled="disabled"/>k
+                                    </li>
+                                    <li>
+                                        <!--<i class="icon-location-outline"></i>-->
+                                        月薪上限:
+                                        <input type="text" name="salary_high" style="width: 90px;height: 29px;vertical-align: baseline;" value="{$job['salary_high']}" disabled="disabled"/>k
+                                    </li>
+                                    <li>
+                                        <!--<i class="icon-location-outline"></i>-->
+                                        招聘人数:
+                                        <input type="text" name="need_people" style="width: 90px;height: 29px;vertical-align: baseline;" value="{$job['need_people']}" disabled="disabled"/>
+                                    </li>
+                                    <input type="hidden" name="c_name" id="n_c_name" value="" disabled="disabled"/>
+                                    <input type="hidden" name="short_name" id="n_short_name" value="" disabled="disabled"/>
+                                    <input type="hidden" name="tel" id="n_tel" value="" disabled="disabled"/>
+                                    <input type="hidden" name="email" id="n_email" value="" disabled="disabled"/>
+                                    <input type="hidden" name="trade" id="n_trade" value="" disabled="disabled"/>
+                                    <input type="hidden" name="invest" id="n_invest" value="" disabled="disabled"/>
+                                    <input type="hidden" name="scale" id="n_scale" value="" disabled="disabled"/>
+                                   <input type="hidden" name="address" id="n_address" value="" disabled="disabled"/>
+
+                                </ul>
+                            </div>
+                            <div class="C-position-text">
+                                <p>职位描述</p>
+                                <textarea id="editor" style="margin: 0px;width: 798px;height: 400px;" autocomplete="off" name="text" rows="" cols="">{$job['text']}</textarea>
+                            </div>
+                            <div class="C-position-menu">
+                                <div>
+                                    <button style="display: block;width: 100px;height: 50px;line-height: 50px;text-align: center;border: #ddd 1px solid;float:left;border-radius: 4px;margin-right: 10px;"  class="C-webe" type="button" onclick="save(this)">编辑</button>
+                                    <!--<a href="javascript:save(this)" class="C-webe">编辑</a>-->
+                                    <!--<a href="javascript:update_dest()">保存描述</a>-->
+                                    <a href="javascript:delete_job()">删除</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+
+		        </div>
+            </div>
+
+        </div>
+    </div>
+    <include file="Public:footer" />
+</div>
+<script src="{$Think.config.JS_URL}jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="{$Think.config.BK_JS_URL}layer1/layer.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__STYLE__/js/ueditor/ueditor.config.js"></script>
+
+    <script type="text/javascript">
+        UEDITOR_CONFIG.toolbars = [[
+            'fullscreen', 'source', '|', 'undo', 'redo', '|',
+            'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+            'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+            'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
+            'directionalityltr', 'directionalityrtl', 'indent', '|',
+            'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+            'link', 'unlink', '', '|', 'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
+            'simpleupload', '', 'emotion', 'scrawl', '', '', 'attachment', 'map', '', '', 'insertcode', '', '', 'template', 'background', '|',
+            'horizontal', 'date', 'time', 'spechars', '', '', '|',
+            'inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols', 'charts', '|',
+            '', '', 'searchreplace', '', 'drafts'
+        ]]
+    </script>
+    <script type="text/javascript" charset="utf-8" src="__STYLE__/js/ueditor/ueditor.all.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="__STYLE__/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript">
+
+        //实例化编辑器
+        //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+        var ue = UE.getEditor('editor');
+    </script>
+<script>
+    function delete_job() {
+        var jid = $('#jid').val()
+        var url = "{:U('Company/delete',array('jid'=>$job['jid']))}"
+        var msg = "您确认要删除职位吗?";
+        if (confirm(msg)==true){
+            $.ajax({
+                type : "get",
+                url: url,
+                success: function(data)
+                {
+                    if(data.status == 1) {
+                        alert(data.msg)
+                        window.location.href="{:U('')}"
+                    }else{
+                        alert(data.msg)
+                    }
+                }
+            });
+        }else{
+            return false;
+        }
+    }
+    function save(obj) {
+        if($(".C-webe").html()=="编辑"){
+            $(".C-position-Box").find("input").removeAttr("disabled").css("border","#ddd 1px solid");
+            $(".com-manage").find("input").removeAttr("disabled").css("border","#ddd 1px solid");
+            $(".company-name").removeAttr("disabled").css("border","#ddd 1px solid");
+            $('.study').css({display:'inline-block'});
+            $('.info-value').css({display:'none'});
+            $(".C-webe").html("保存");
+        }else{
+            var c_name = $('#c_name').val()
+            $('#n_c_name').val(c_name)
+            var short_name = $('#short_name').val()
+            $('#n_short_name').val(short_name)
+            var email = $('#email').val()
+            $('#n_email').val(email)
+            var trade = $('#trade').val()
+            $('#n_trade').val(trade)
+            var invest = $("#invest").val();
+            $('#n_invest').val(invest)
+            var scale = $('#scale').val()
+            $('#n_scale').val(scale)
+            var address = $('#address').val()
+            $('#n_address').val(address)
+            var tel = $('#tel').val()
+            $('#n_tel').val(tel)
+            if($('#n_c_name').val()==''){
+                alert('请填写公司名称')
+                return;
+            }
+            if($('#n_short_name').val()==''){
+                alert('请填写联系人')
+                return;
+            }
+            if($('#n_trade').val()==''){
+                alert('请填写公司所属领域')
+                return;
+            }
+            if($('#name').val()==''){
+                alert('请填写职位名称')
+                return;
+            }
+            if($('#edu').val()==''){
+                alert('请选择学历需要')
+                return;
+            }
+            if($('#work_year').val()==''){
+                alert('请选择工作经验')
+                return;
+            }
+            if($('#salary_low').val()==''){
+                alert('请填写月薪下限')
+                return;
+            }
+            if($('#salary_high').val()==''){
+                alert('请填写月薪上限')
+                return;
+            }
+            if($('#n_email').val()==''){
+                alert('请填写联系邮箱')
+                return;
+            }
+            if($('#tel').val()==''){
+                alert('请填写联系手机')
+                return;
+            }
+            if($('#n_address').val()==''){
+                alert('请填写公司地址')
+                return;
+            }
+//            var obj = $(obj).parents('form');
+            var identityAuth = new FormData(document.getElementById("identityAuth"));
+            var url = "{:U('Home/Company/do_school_edit_job')}";
+            $.ajax({
+                type : "post",
+                data : identityAuth,
+//                data: _list,
+                processData:false,
+                contentType:false,
+                url: url,
+
+                success: function(data)
+                {
+                    if(data.code == 1) {
+                        $(".C-webe").html("编辑");
+                        $(".C-position-Box").find("input").attr("disabled","disabled").css("border","0");
+                        alert(data.msg)
+
+                    }else{
+                        alert(data.msg)
+                    }
+                }
+            });
+
+
+        }
+    }
+    $(function () {
+    	$("#imghead").click(function(){
+            layer.msg('请选择2M以下的图片文件', {
+                offset: 't',
+                shift: -1,
+                anim: 10
+            });
+    		$("#upload").click();
+    	});
+    	$("#upload").change(function(){
+       		var objUrl = getObjectURL(this.files[0]) ;
+       		$("#imghead").attr("src",objUrl);
+        });
+    	
+        $('.information-subNav li').click(function () {
+            $('.information-subNav li').removeClass('select');
+            $(this).addClass('select');
+        })
+        $(".click-textarea").click(function(){
+        	$(".open-position").hide();
+        	$(".C-list").hide();
+        	$(".C-textarea").find("textarea").show();
+        	$(".C-textarea").find("a").show();
+        });
+        $(".animate-ok").click(function(){
+        	$(".open-position").show();
+        	$(".C-list").show();
+        	$(".C-textarea").find("textarea").hide();
+        	$(".C-textarea").find("a").hide();
+        });
+//        $(".C-edit a").click(function(){
+//
+//        	if($(".C-edit a").html()=="编辑"){
+//	        	$(".com-manage").find("input").removeAttr("disabled").css("border","#ddd 1px solid");
+//	        	$(".company-name").removeAttr("disabled").css("border","#ddd 1px solid");
+//	        	$(".C-edit a").html("保存");
+//        	}else{
+//        		$(".C-edit a").html("编辑");
+//        		$(".com-manage").find("input").attr("disabled","disabled").css("border","0");
+//        		$(".company-name").attr("disabled","disabled").css("border","0");
+//        	}
+//        });
+
+//        $(".C-webe").click(function(){
+
+    })
+    
+    function getObjectURL(file) {
+	  	var url = null ;
+	  	if (window.createObjectURL!=undefined) { 
+	    	url = window.createObjectURL(file) ;
+	  	} else if (window.URL!=undefined) {
+	    	url = window.URL.createObjectURL(file) ;
+	  	} else if (window.webkitURL!=undefined) {
+	    	url = window.webkitURL.createObjectURL(file) ;
+	  	}
+	  	return url ;
+	}
+    
+</script>
+</body>
+</html>

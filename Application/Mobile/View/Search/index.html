@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1 , minimum-scale=1.0 , maximum-scale=1.0 , user-scalable=no"/>
+	<title>Document</title>
+	<link rel="stylesheet" href="{$Think.config.MB_CSS_URL}reset.css"/>
+	<link rel="stylesheet" type="text/css" href="{$Think.config.MB_CSS_URL}index.css">
+	<script type="text/javascript" src="{$Think.config.MB_JS_URL}global.js"></script>
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<div class="img">
+				<a href="{:U('Index/index')}"><img src="{$Think.config.MB_IMG_URL}icon/Left.png" alt=""></a>
+				<!--<img src="{$Think.config.MB_IMG_URL}icon/wrong (1).png">-->
+			</div>
+			<!--<a href="javascript:history.go(-1)"><img src="{$Think.config.MB_IMG_URL}icon/Left.png" alt=""></a>-->
+			搜索结果
+		</div>
+		<div class="container">
+			<div class="banner">
+				<form id="searchForm" action="{:U('Mobile/Search/index')}">
+					<input type="text" id="query" name="query" value="{$query}" placeholder="搜索您想要的">
+					<!--<button type="submit">搜索</button>-->
+				</form>
+
+				<!--<img src="{$Think.config.MB_IMG_URL}icon/search.png">-->
+			</div>
+			<div class="news">
+				<ul>
+					<!--<foreach name="jobs" item="job" >-->
+						<!--<a href="{:U('Mobile/JobShow/index',array('jid'=>$job['jid']))}">-->
+							<!--<div class="newList">-->
+								<!--<div>-->
+									<!--<span class="jobName">{$job['name']}</span>-->
+									<!--<span class="price">{$job['salary_low']}k~{$job['salary_high']}k</span>-->
+								<!--</div>-->
+								<!--<span class="conName">{$job['c_name']}</span>-->
+
+								<!--<div class="require">-->
+									<!--<div>-->
+										<!--<img src="{$Think.config.MB_IMG_URL}icon/study.png" alt="">-->
+										<!--{$job['edu']}-->
+									<!--</div>-->
+									<!--<div>-->
+										<!--<img src="{$Think.config.MB_IMG_URL}icon/time.png" alt="">-->
+										<!--{$job['work_year']}-->
+									<!--</div>-->
+									<!--<div>-->
+										<!--<img src="{$Think.config.MB_IMG_URL}icon/person (2).png">-->
+										<!--{$job['need_people']}-->
+									<!--</div>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</a>-->
+					<!--</foreach>-->
+				</ul>
+
+				<ul id = "add-content"></ul>
+		</div>
+
+			<script src="{$Think.config.JS_URL}jquery-3.1.1.min.js"></script>
+			<script type="text/javascript">
+
+                $(document).ready(function(){
+                    get_remindList()
+                });
+
+			</script>
+			<script type="text/javascript">
+				function search(obj) {
+                    $("searchForm").submit()
+                }
+			</script>
+			<script type="text/javascript">
+                var page = 1;
+                var reg ="no-ajax-content"; //匹配<p>标签判断获取的页面是否没有更多了
+                var newPage = true;
+                var url = "{:U('Search/index')}";
+
+                function get_remindList(){
+                    //$('.get_more').show();
+                    if(newPage){
+                        $.ajax({
+                            type : "get",
+							data : {'p':page,is_ajax:1,query:$('#query').val()},
+							url: url,
+                            dataType:'html',
+                            success: function(data)
+                            {
+                                var tmp = data;
+                                if(data){
+                                    //alert($(data).attr("id") );
+                                    $("#add-content").append(data);
+                                    page++;
+                                    if(tmp.match(reg)){
+                                        //如果是no-ajax-content则标记为false
+                                        newPage = false;
+                                    }
+                                }else{
+//                           $("#mycomment").append(data);
+//                            page++;
+                                }
+                            }
+                        });
+                    }
+
+                }
+                function getScrollTop(){
+                    var scrollTop = 0, bodyScrollTop = 0, documentScrollTop = 0;
+                    if(document.body){
+                        bodyScrollTop = document.body.scrollTop;
+                    }
+                    if(document.documentElement){
+                        documentScrollTop = document.documentElement.scrollTop;
+                    }
+                    scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+                    return scrollTop;
+                }
+                //文档的总高度
+                function getScrollHeight(){
+                    var scrollHeight = 0, bodyScrollHeight = 0, documentScrollHeight = 0;
+                    if(document.body){
+                        bodyScrollHeight = document.body.scrollHeight;
+                    }
+                    if(document.documentElement){
+                        documentScrollHeight = document.documentElement.scrollHeight;
+                    }
+                    scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight;
+                    return scrollHeight;
+                }
+                //浏览器视口的高度
+                function getWindowHeight(){
+                    var windowHeight = 0;
+                    if(document.compatMode == "CSS1Compat"){
+                        windowHeight = document.documentElement.clientHeight;
+                    }else{
+                        windowHeight = document.body.clientHeight;
+                    }
+                    return windowHeight;
+                }
+                window.onscroll = function(){
+                    if(getScrollTop() + getWindowHeight() == getScrollHeight()){
+                        get_remindList();
+                    }
+                };
+			</script>
+		<div class="footer">
+			<div class="home">
+				<img src="{$Think.config.MB_IMG_URL}icon/home (1).png">
+				<a href="{:U('Index/index')}">主页</a>
+			</div>
+			<div class="mine">
+				<img src="{$Think.config.MB_IMG_URL}icon/person (3).png">
+				<if condition="$Think.session.user neq null">
+					<a href="{:U('User/index')}">个人中心</a>
+				<elseif  condition="$Think.session.company neq null"/>
+					<a href="{:U('Company/index')}">企业中心</a>
+					<else />
+					<a href="{:U('Users/login')}">快速登录</a>
+				</if>
+			</div>
+			<script type="text/javascript">
+                function user_open_qq() {
+                    window.location.href = "{:U('Home/LoginApi/login',array('oauth'=>'qq','is_mobile'=>1))}";
+                }
+			</script>
+		</div>
+	</div>
+</body>
+</html>

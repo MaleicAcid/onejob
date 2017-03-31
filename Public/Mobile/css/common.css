@@ -1,0 +1,11 @@
+@media screen and (min-width: 413px)  {
+	body{height: 736px;}
+}
+@media screen and (max-width: 375px)  {
+	body{height: 667px;}
+}
+header{text-align: center;vertical-align: middle;font-size: 16px;height: 40px;border-bottom: 1px solid #ddd;position: relative;}
+header img{position: absolute;top:35%;left: 5%;}
+header span{line-height: 40px;margin-left: -2px;}
+.main-content{text-align: center;vertical-align: middle;margin-top: 30%;}
+.blue{background-color: #2EACFD;color: #fff;}

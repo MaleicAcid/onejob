@@ -1,0 +1,25 @@
+{__NOLAYOUT__}
+<empty name="index_jobs">
+    <p id="no-ajax-content" style="text-align: center;font-size: 16px;color: #575151;padding: 15px 0 18px 0;">没有更多了</p>
+    <else />
+    <foreach name="index_jobs" item="job" >
+        <li>
+            <a href = "{:U('Home/JobShow/index',array('jid'=>$job['jid']))}" >
+                <div class="left">
+                    <h1>{$job['name']}</h1>
+                    <div class="requirements">
+                        <span>{$job['edu']}</span>
+                        <span>{$job['work_year']}</span>
+                        <span>{$job['need_people']}人</span>
+                    </div>
+                    <div class="time">截止日期：<span>{$job['end_time']}</span></div>
+                </div>
+                <div class="right">
+                    <div class="salary">{$job['salary_low']}k~{$job['salary_high']}k</div>
+                    <div><img src="{$job['c_logo']}" alt=""></div>
+                    <div class="name">{$job['c_name']}</div>
+                </div>
+            </a>
+        </li>
+    </foreach>
+</empty>

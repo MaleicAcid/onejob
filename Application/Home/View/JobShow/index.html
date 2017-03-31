@@ -1,0 +1,410 @@
+<style>
+    /* .introduce ul{
+        height: auto;
+
+    }
+    .introduce ul li {
+        height: 63px;
+
+    }
+    .introduce ul li input{
+        vertical-align: text-bottom;
+    } */
+    #contactPerson{
+        padding: 0 0 10px 10px ;
+        cursor: pointer;
+    }
+    #contactPerson > span{
+        width: auto;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    #contactPerson  > i {
+        display: inline-block;
+        color: #000;
+        transform: rotate(90deg);
+        font: 600 11px/14px cursive;
+        margin-left: 8%;
+        vertical-align: text-top;
+        transition: transform .3s;
+    }
+</style>
+    <div class="main">
+        <div class="details">
+            <div class="details-enterpriseInformation">
+                <div class="details-enterpriseInformation-basic">
+                    <img src="{$res_job['company_info']['logo']}" alt="">
+                    <h1>{$res_job['short_name']}</h1>
+                    <!--<ul>-->
+                        <!--<li><i class=" icon-user-7"><a href="{:U('CompanyShow/index',array('id'=>$res_job['company_info']['id']))}"></i>{$res_job['company_info']['name']}</li></a>-->
+                        <!--<li><i class=" icon-phone-outline"></i>{$res_job['company_info']['tel']}</li>-->
+                        <!--<li><i class=" icon-mail"></i>{$res_job['company_info']['email']}</li>-->
+                        <!--<li><i class=" icon-location-outline"></i>{$res_job['company_info']['address']}</li>-->
+                    <!--</ul>-->
+                    <!--  add-->
+                    <div id="contactPerson" ><span>投简历</span><i>>></i></div>
+                    <if condition="$contact_way eq 1">
+                    <ul style="display: none;">
+                        <!--<li><i class=" icon-user-7"><a href="{:U('CompanyShow/index',array('id'=>$res_job['company_info']['id']))}"></i>{$res_job['company_info']['name']}</li></a>-->
+                        <!--<li><i class=" icon-phone-outline"></i>{$res_job['company_info']['tel']}</li>-->
+                        <li><i class=" icon-mail"></i>{$res_job['company_info']['email']}</li>
+                        <!--<li><i class=" icon-location-outline"></i>{$res_job['company_info']['address']}</li>-->
+                    </ul>
+                        <else/>
+                        <ul style="display: none;">
+                            <li><i class=" icon-user-7">></i>{$msg}</li>
+                        </ul>
+                    </if>
+                    <!--  add-->
+                </div>
+                <div class="details-enterpriseInformation-introduce">
+                    <p>公司介绍</p>
+                    <hr>
+                    <span>{$res_job['company_info']['desc']}</span>
+                </div>
+            </div>
+            <div class="positionInformation">
+                <div class="positionInformation-position">
+                    <div class="left">
+                        <h1>{$res_job['name']}</h1>
+                        <div class="requirements">
+                            <span>{$res_job['edu']}</span>
+                            <span>{$res_job['work_year']}</span>
+                            <span>{$res_job['need_people']}人</span>
+                        </div>
+                        <div class="time">截止日期：<span>{$res_job['end_time']}</span></div>
+                    </div>
+                    <div class="right">
+                        <div class="salary">{$res_job['salary_low']}k~{$res_job['salary_high']}k</div>
+                        <if condition="($res_job['showCol'] eq 1)">
+                        <a id="collect" onclick="collect_job({$res_job['jid']})" class="icon-star" style="color:rgb(255, 255, 0);font-size: 40px;"></a>
+                        <else />
+                            <a id="collect" onclick="collect_job({$res_job['jid']})" class="icon-star" style="color:#ccc;font-size: 40px;"></a>
+                        </if>
+                        <!--<div class="shares" >-->
+                            <!--<div class="share-f"><span class="line"></span><span class="label">分享：</span></div>-->
+                            <!--<div class="jiathis_style_24x24" style="display: inline-block;">-->
+                                <!--<a class="jiathis_button_qzone"></a>-->
+                                <!--<a class="jiathis_button_weixin"></a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<a>分享</a>-->
+                        <div class="bdsharebuttonbox" data-tag="share_1">
+                            <a class="bds_qzone" data-cmd="qzone" href="#"></a>
+                            <a class="bds_weixin" data-cmd="weixin"></a>
+                        </div>
+                        <script>
+                            window._bd_share_config = {
+                                common : {
+                                    bdText : "{$user['realname']}送你一个【{$res_job['name']}】岗位",
+//                                    bdDesc : '自定义分享摘要',
+                                    bdPic : "https://www.zhaopinzd.com/Public/Home/image/logo.jpg"
+                                },
+                                share : [{
+                                    "bdSize" : 24
+                                }],
+                            }
+                            with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='https://www.zhaopinzd.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+                        </script>
+
+                    </div>
+                </div>
+                <div class="positionInformation-introduce">
+                    <div class="describe">
+                        <p>企业介绍</p>
+                    </div>
+                    <div class="introduce">
+                        <ul>
+                            <li><i style="float:none;line-height: 60px;" class=" icon-address-1"></i>{$res_job['company_info']['trade']}</li>
+                            <li><i style="float:none;line-height: 60px;" class="  icon-doc-text-2"></i>{$res_job['company_info']['invest']}</li>
+                            <li><i style="float:none;line-height: 60px;" class="  icon-users-outline"></i>{$res_job['company_info']['scale']}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="positionInformation-describe">
+                    <div class="describe">
+                        <p>职位描述</p>
+                    </div>
+                    <div class="describe-list">
+                        <?php echo html_entity_decode($res_job['text'],ENT_QUOTES, 'UTF-8');?>
+                        <!--<p>岗位职责:</p>-->
+                        <!--<ol>-->
+                            <!--<li>负责公司产品界面的整体UI、UE规划和设计I及实施；</li>-->
+                            <!--<li>负责公司产品界面的整体UI、UE规划和设计I及实施；</li>-->
+                            <!--<li>负责公司产品界面的整体UI、UE规划和设计I及实施；</li>-->
+                            <!--<li>负责公司产品界面的整体UI、UE规划和设计I及实施；</li>-->
+                            <!--<li>负责公司产品界面的整体UI、UE规划和设计I及实施；</li>-->
+                            <!--<li>负责公司产品界面的整体UI、UE规划和设计I及实施；</li>-->
+                        <!--</ol>-->
+                        <!--<p>职位要求:</p>-->
+                        <!--<ol>-->
+                            <!--<li>负责公司产品界面的整体UI、UE规划和设计I及实施；</li>-->
+                            <!--<li>负责公司产品界面的整体UI、UE规划和设计I及实施；</li>-->
+                            <!--<li>负责公司产品界面的整体UI、UE规划和设计I及实施；</li>-->
+                            <!--<li>负责公司产品界面的整体UI、UE规划和设计I及实施；</li>-->
+                            <!--<li>负责公司产品界面的整体UI、UE规划和设计I及实施；</li>-->
+                            <!--<li>负责公司产品界面的整体UI、UE规划和设计I及实施；</li>-->
+                        <!--</ol>-->
+                    </div>
+                </div>
+                <div class="positionInformation-comment">
+                    <script type="text/javascript">
+//                    var jiathis_config = {
+//                    title:"{$user.realname}送你一个【{$res_job.name}】岗位",
+//                    pic:"{$res_job['company_info']['logo']}",
+//                    data_track_clickback:true,
+//                    }
+                    </script>
+                    <!--<script type="text/javascript" src="{$Think.config.JS_URL}jia.js" charset="utf-8"></script>-->
+
+
+
+                    <div class="describe clearfix">
+                        <p>评论中心</p>
+
+                        <!--<div onclick="showReply(this)" class="reply">评论</div>-->
+                        <div class="inp">
+                            <form action="{:U('Home/User/add_comment')}">
+                                <input type="hidden" id="job_id" name="job_id" value="{$res_job['jid']}"/>
+                                <input type="text" name="content"/>
+                                <button style="margin-left:0;" onclick="javascript:comment_submit(this)" type="button">发送</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div style="display:block" id="ajax_comment_return">
+                        <!--ajax 然后分页数据-->
+                        <!--<div class="comment-list">-->
+                            <!--<div class="userName">-->
+                                <!--<div class="userIcon">-->
+                                    <!--<img src="image/a.png" alt="">-->
+                                    <!--<span>周杰伦</span>-->
+                                <!--</div>-->
+                                <!--<div class="userTime">-->
+                                    <!--<span>2017.02.22</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="comment-content">-->
+                                <!--<p>你好，我自认为能胜任该职位，可否近一步详聊！</p>-->
+                                <!--<div class="reply">回复</div>-->
+                                <!--<div class="inp">-->
+                                    <!--<form action="">-->
+                                        <!--<input type="text" name="content">-->
+                                        <!--<button type="submit">发送</button>-->
+                                    <!--</form>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<hr>-->
+
+                    </div>
+                    <div class="number">
+                        <ul>
+                            <!--{$page}-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+
+    <script src="{$Think.config.JS_URL}jquery-3.1.1.min.js"></script>
+    <script>
+        function comment_submit(t){
+            //表单对象
+            var form = $(t).parent();
+            var data = $(form).serialize();
+            $.ajax({
+                type : "POST",
+                url:"{:U('Home/User/add_comment')}",
+                data :data,// 你的formid 搜索表单 序列化提交
+                success: function(data){
+                    data = jQuery.parseJSON(data);
+                    console.log(data);
+                    if(data.status == 1){
+                        //评论成功
+                        alert('评论成功');
+                        location.reload()
+                    }else if(data.status == -2) {
+                        alert(data.msg);
+                        window.location.href  = "{:U('Home/Users/login')}"
+                    }else if(data.status == -4) {
+                        alert(data.msg);
+                        window.location.href  = "{:U('Home/User/index')}"
+                    }else{
+                        alert(data.msg);
+                    }
+                },
+                error: function(data){
+                        alert('error');
+                }
+            });
+        }
+
+        function reply_submit(){
+            //表单对象
+            var jid = $('#job_id').val();
+            var content = $('#reply_content').val();comment_pid
+            var comment_pid = $('#comment_pid').val();
+            $.ajax({
+                type : "POST",
+                url:"{:U('Home/Company/reply_comment')}",
+                data :{jid:jid,content:content,comment_pid:comment_pid},// 你的formid 搜索表单 序列化提交
+                success: function(data){
+                    data = jQuery.parseJSON(data);
+                    //console.log(data);
+                    if(data.status == 1){
+                        //评论成功
+                        alert('回复成功');
+                        location.reload()
+                    }else{
+                        alert(data.msg);
+                    }
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        function showReply(obj) {
+            if ($(obj).next().css('display') == 'none'){
+                $(obj).next().css('display','block')
+            }else {
+                $(obj).next().css('display','none')
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        // 点击收藏商品
+        function collect_job(job_id){
+            $.ajax({
+                type : "post",
+                dataType: "json",
+                data : {'jid':job_id},
+                url:"{:U('Home/User/collect_job')}",
+                success: function(data){
+                    if (data.status == -2) {
+                        alert(data.msg)
+                        window.location.href  = "{:U('Home/Users/login')}"
+                    }else if (data.status == 1 || data.status == -3){
+                        change_color()
+                    }else if(data.status == -4) {
+                        alert(data.msg);
+//                        window.location.href  = "{:U('Home/User/index')}"
+                    }else{
+                        alert(data.msg)
+                    }
+                }
+            });
+        }
+        function change_color() {
+            console.log($('#collect').css('color'));
+            if ($('#collect').css('color') == 'rgb(255, 255, 0)'){
+                $('#collect').css('color','#ccc')
+            }else {
+                $('#collect').css('color','rgb(255, 255, 0)')
+                alert('收藏成功')
+            }
+        }
+        function showReply(obj) {
+            if ($(obj).next().css('display') == 'none'){
+                $(obj).next().fadeIn();
+                $(obj).find('i').css('transform','rotate(-90deg)');
+            }else {
+                $(obj).next().fadeOut()
+                $(obj).find('i').css('transform','rotate(90deg)');
+            }
+        }
+        $('#contactPerson').click(function(){
+            showReply(this);
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            ajaxComment();// ajax 加载评价列表
+        });
+
+    </script>
+    <script type="text/javascript">
+        var page = 1;
+        var jid = {$res_job['jid']};
+        var reg ="no-ajax-content"; //匹配<p>标签判断获取的页面是否没有更多了
+        var newPage = true;
+        var url = "{:U('Home/JobShow/get_job_comment')}";
+        var com_id = {$res_job['company_id']};
+        function ajaxComment(){
+            //$('.get_more').show();
+            if(newPage){
+                $.ajax({
+                    type : "get",
+                    data : {'p':page,'jid':jid,'id':com_id},
+                    url: url,
+                    dataType:'html',
+                    success: function(data)
+                    {
+                        var tmp = data;
+                        if(data){
+                            //alert($(data).attr("id") );
+                            $("#ajax_comment_return").append(data);
+                            page++;
+                            console.log(tmp.match(reg))
+                            console.log(newPage)
+                            if(tmp.match(reg)){
+                                //如果是no-ajax-content则标记为false
+                                newPage = false;
+//                                $(window).unbind("scroll")
+                            }
+                            console.log(newPage)
+                        }else{
+//                           $("#mycomment").append(data);
+//                            page++;
+                        }
+                    }
+                });
+            }else{
+                return;
+            }
+
+        }
+        function getScrollTop(){
+            var scrollTop = 0, bodyScrollTop = 0, documentScrollTop = 0;
+            if(document.body){
+                bodyScrollTop = document.body.scrollTop;
+            }
+            if(document.documentElement){
+                documentScrollTop = document.documentElement.scrollTop;
+            }
+            scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+            return scrollTop;
+        }
+        //文档的总高度
+        function getScrollHeight(){
+            var scrollHeight = 0, bodyScrollHeight = 0, documentScrollHeight = 0;
+            if(document.body){
+                bodyScrollHeight = document.body.scrollHeight;
+            }
+            if(document.documentElement){
+                documentScrollHeight = document.documentElement.scrollHeight;
+            }
+            scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight;
+            return scrollHeight;
+        }
+        //浏览器视口的高度
+        function getWindowHeight(){
+            var windowHeight = 0;
+            if(document.compatMode == "CSS1Compat"){
+                windowHeight = document.documentElement.clientHeight;
+            }else{
+                windowHeight = document.body.clientHeight;
+            }
+            return windowHeight;
+        }
+        window.onscroll = function(){
+            if(getScrollTop() + getWindowHeight() == getScrollHeight()){
+                ajaxComment();
+            }
+        };
+    </script>
+    <include file="Public:footer" />
+</div>
+</body>
+</html>

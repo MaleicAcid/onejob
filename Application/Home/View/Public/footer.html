@@ -1,0 +1,36 @@
+<div class="footer">
+    <div class="pro">
+        <div class="pro-content">
+            <img src="{$Think.config.IMG_URL}erweima.jpg" alt="">
+            <span>扫一扫微信小程序</span>
+            <p>电话咨询:<span>400-123-4564</span></p>
+        </div>
+    </div>
+    <div class="manage">
+        <p>Copyright © 2017 jyzd.com XXXXXXX有限公司 沪ICP备134679852号-1</p>
+        <p>联系地址：上海市XX区XX街道XX大楼XX号 联系电话：010-82585200</p>
+    </div>
+</div>
+
+<script  type="text/javascript" >
+    var scrollFunc=function(e){
+        e=e || window.event;
+        if(e.wheelDelta){
+            if(e.wheelDelta==120){
+                $('.footer').show();
+            }else{
+                $('.footer').hide();
+            }
+        }else if(e.detail){
+            if(e.detail==-3) {
+                $('.footer').show();
+            }else {
+                $('.footer').hide();
+            }
+        }
+    };
+    if(document.addEventListener){
+        document.addEventListener("DOMMouseScroll" ,scrollFunc, false);
+    }
+    window.onmousewheel=document.onmousewheel=scrollFunc;
+</script>

@@ -1,0 +1,655 @@
+[ 2017-03-05T15:01:33+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0640s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_job` WHERE `state` = 1 LIMIT 1   [ RunTime:0.3310s ]
+SQL: SELECT `jid`,`company_id`,`salary_high`,`salary_low`,`name`,`create_time` FROM `oj_job` WHERE `state` = 1 ORDER BY is_top LIMIT 0,10   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0400s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0330s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0460s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0610s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0310s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: user D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 133 行.
+NOTIC: [8] Undefined index: company D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-05T15:01:34+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:index.js.map
+
+[ 2017-03-05T15:01:40+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_job` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT `jid`,`company_id`,`salary_high`,`salary_low`,`name`,`create_time` FROM `oj_job` WHERE `state` = 1 ORDER BY is_top LIMIT 0,10   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0390s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0300s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: user D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 133 行.
+NOTIC: [8] Undefined index: company D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-05T15:01:41+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:index.js.map
+
+[ 2017-03-05T15:02:20+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_job` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `jid`,`company_id`,`salary_high`,`salary_low`,`name`,`create_time` FROM `oj_job` WHERE `state` = 1 ORDER BY is_top LIMIT 0,10   [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0280s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0300s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: user D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 133 行.
+NOTIC: [8] Undefined index: company D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-05T15:02:20+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:index.js.map
+
+[ 2017-03-05T15:05:01+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_job` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `jid`,`company_id`,`salary_high`,`salary_low`,`name`,`create_time` FROM `oj_job` WHERE `state` = 1 ORDER BY is_top LIMIT 0,10   [ RunTime:0.0690s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0300s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: user D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 133 行.
+NOTIC: [8] Undefined index: company D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-05T15:05:04+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_job` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `jid`,`company_id`,`salary_high`,`salary_low`,`name`,`create_time` FROM `oj_job` WHERE `state` = 1 ORDER BY is_top LIMIT 0,10   [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0300s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: user D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 133 行.
+NOTIC: [8] Undefined index: company D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-05T15:05:05+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_job` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `jid`,`company_id`,`salary_high`,`salary_low`,`name`,`create_time` FROM `oj_job` WHERE `state` = 1 ORDER BY is_top LIMIT 0,10   [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0300s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: user D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 133 行.
+NOTIC: [8] Undefined index: company D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-05T15:05:05+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:index.js.map
+
+[ 2017-03-05T15:05:07+08:00 ] 127.0.0.1 /index.php/Mobile/Index/get_index_jobs.html?page=2&is_ajax=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_job` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `jid`,`company_id`,`salary_high`,`salary_low`,`name`,`create_time` FROM `oj_job` WHERE `state` = 1 ORDER BY is_top LIMIT 0,10   [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0300s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-05T15:05:07+08:00 ] 127.0.0.1 /index.php/Mobile/JobShow/index/jid/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_job` WHERE `jid` = 6 AND `state` = 1 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_company` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0300s ]
+NOTIC: [8] Undefined index:  D:\TortoiseSVNspace\onejobtest\Application\Mobile\Controller\JobShowController.class.php 第 32 行.
+NOTIC: [8] Undefined index: invest D:\TortoiseSVNspace\onejobtest\Application\Mobile\Controller\JobShowController.class.php 第 33 行.
+NOTIC: [8] Undefined index:  D:\TortoiseSVNspace\onejobtest\Application\Mobile\Controller\JobShowController.class.php 第 33 行.
+SQL: SHOW COLUMNS FROM `oj_user_collect_job` [ RunTime:0.0300s ]
+NOTIC: [8] Undefined index: user D:\TortoiseSVNspace\onejobtest\Application\Mobile\Controller\JobShowController.class.php 第 38 行.
+SQL: SELECT * FROM `oj_user_collect_job` WHERE `job_id` = 6 AND `user_id` = null LIMIT 1   [ RunTime:0.0300s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\9f3ae9fbe10e90892b9750e0ccadb77c.php 第 20 行.
+NOTIC: [8] Undefined index: name D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\9f3ae9fbe10e90892b9750e0ccadb77c.php 第 33 行.
+NOTIC: [8] Undefined index: short_name D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\9f3ae9fbe10e90892b9750e0ccadb77c.php 第 56 行.
+NOTIC: [8] Undefined index: tel D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\9f3ae9fbe10e90892b9750e0ccadb77c.php 第 60 行.
+NOTIC: [8] Undefined index: email D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\9f3ae9fbe10e90892b9750e0ccadb77c.php 第 64 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-05T15:05:08+08:00 ] 127.0.0.1 /index.php/Mobile/JobShow/index/jid/index.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `oj_user` WHERE `id` = null LIMIT 1   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_job` WHERE `jid` = 0 AND `state` = 1 LIMIT 1   [ RunTime:0.0310s ]
+
+[ 2017-03-05T15:05:08+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0330s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_job` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `jid`,`company_id`,`salary_high`,`salary_low`,`name`,`create_time` FROM `oj_job` WHERE `state` = 1 ORDER BY is_top LIMIT 0,10   [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0320s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0300s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: user D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 133 行.
+NOTIC: [8] Undefined index: company D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-05T15:05:11+08:00 ] 127.0.0.1 /index.php/Mobile/Users/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-05T15:05:11+08:00 ] 127.0.0.1 /index.php/Mobile/Users/index.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 模板不存在:./Application/Mobile/View/Users/index.js.map.html
+
+[ 2017-03-05T15:05:17+08:00 ] 127.0.0.1 /index.php/Mobile/Users/user_login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-05T15:05:17+08:00 ] 127.0.0.1 /index.php/Mobile/Users/index.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 模板不存在:./Application/Mobile/View/Users/index.js.map.html
+
+[ 2017-03-05T15:05:28+08:00 ] 127.0.0.1 /index.php/Mobile/Users/index.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 模板不存在:./Application/Mobile/View/Users/index.js.map.html
+
+[ 2017-03-05T17:19:37+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_job` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT `jid`,`company_id`,`salary_high`,`salary_low`,`name`,`create_time` FROM `oj_job` WHERE `state` = 1 ORDER BY is_top LIMIT 0,10   [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0320s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0310s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: user D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 133 行.
+NOTIC: [8] Undefined index: company D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-05T17:19:38+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:index.js.map
+
+[ 2017-03-05T17:19:40+08:00 ] 127.0.0.1 /index.php/Mobile/Users/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-05T17:19:40+08:00 ] 127.0.0.1 /index.php/Mobile/Users/index.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 模板不存在:./Application/Mobile/View/Users/index.js.map.html
+
+[ 2017-03-05T17:19:41+08:00 ] 127.0.0.1 /index.php/Mobile/Users/user_login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-05T17:19:41+08:00 ] 127.0.0.1 /index.php/Mobile/Users/index.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 模板不存在:./Application/Mobile/View/Users/index.js.map.html
+
+[ 2017-03-05T19:02:54+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_job` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `jid`,`company_id`,`salary_high`,`salary_low`,`name`,`create_time` FROM `oj_job` WHERE `state` = 1 ORDER BY is_top LIMIT 0,10   [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0560s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0310s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: user D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 133 行.
+NOTIC: [8] Undefined index: company D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-05T19:02:54+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:index.js.map
+
+[ 2017-03-05T19:30:21+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_job` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `jid`,`company_id`,`salary_high`,`salary_low`,`name`,`create_time` FROM `oj_job` WHERE `state` = 1 ORDER BY is_top LIMIT 0,10   [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0350s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: user D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 133 行.
+NOTIC: [8] Undefined index: company D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-05T19:30:21+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:index.js.map
+
+[ 2017-03-05T19:49:15+08:00 ] 127.0.0.1 /index.php/Mobile/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_job` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `jid`,`company_id`,`salary_high`,`salary_low`,`name`,`create_time` FROM `oj_job` WHERE `state` = 1 ORDER BY is_top LIMIT 0,10   [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0320s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0300s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: user D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 133 行.
+NOTIC: [8] Undefined index: company D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Mobile\59803a09875c7569286531ef77035039.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

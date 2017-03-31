@@ -1,0 +1,526 @@
+[ 2017-03-07T21:16:50+08:00 ] 127.0.0.1 /index.php/Mina/ConpanyShow/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:ConpanyShow
+
+[ 2017-03-07T21:17:02+08:00 ] 127.0.0.1 /index.php/Mina/CompanyShow/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0330s ]
+SQL: SELECT `id`,`name`,`trade`,`invest`,`scale`,`address`,`desc` FROM `oj_company` WHERE `id` = 65 LIMIT 1   [ RunTime:0.0320s ]
+ERR: 模板不存在:./Application/Mina/View/CompanyShow/index.html
+
+[ 2017-03-07T21:18:34+08:00 ] 127.0.0.1 /index.php/Mina/CompanyShow/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0330s ]
+SQL: SELECT `id`,`name`,`trade`,`invest`,`scale`,`address`,`desc` FROM `oj_company` WHERE `id` = 65 LIMIT 1   [ RunTime:0.0310s ]
+
+[ 2017-03-07T21:21:16+08:00 ] 127.0.0.1 /index.php/Mina/CompanyShow/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0390s ]
+SQL: SELECT `id`,`name`,`trade`,`invest`,`scale`,`address`,`one_desc`,`desc` FROM `oj_company` WHERE `id` = 65 LIMIT 1   [ RunTime:0.0400s ]
+NOTIC: [8] Undefined index: 50-150人 D:\TortoiseSVNspace\onejobtest\Application\Home\Logic\CompanyLogic.class.php 第 35 行.
+
+[ 2017-03-07T21:21:50+08:00 ] 127.0.0.1 /index.php/Mina/CompanyShow/index?id=65
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0290s ]
+SQL: SELECT `id`,`name`,`trade`,`invest`,`scale`,`address`,`one_desc`,`desc` FROM `oj_company` WHERE `id` = 65 LIMIT 1   [ RunTime:0.0290s ]
+NOTIC: [8] Undefined index: 50-150人 D:\TortoiseSVNspace\onejobtest\Application\Home\Logic\CompanyLogic.class.php 第 35 行.
+
+[ 2017-03-07T21:25:36+08:00 ] 127.0.0.1 /index.php/Mina/CompanyShow/index?id=65
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0300s ]
+SQL: SELECT `id`,`name`,`trade`,`invest`,`scale`,`address`,`one_desc`,`desc` FROM `oj_company` WHERE `id` = 65 LIMIT 1   [ RunTime:0.0290s ]
+
+[ 2017-03-07T21:44:55+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0300s ]
+
+[ 2017-03-07T21:46:07+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 5,5   [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 15 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 16 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 17 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 18 LIMIT 1   [ RunTime:0.0310s ]
+
+[ 2017-03-07T21:46:13+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 10 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0330s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 11 LIMIT 1   [ RunTime:0.0620s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 12 LIMIT 1   [ RunTime:0.0330s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 13 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 14 LIMIT 1   [ RunTime:0.0310s ]
+
+[ 2017-03-07T21:49:46+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 10 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 11 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 12 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 13 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 14 LIMIT 1   [ RunTime:0.0330s ]
+
+[ 2017-03-07T21:49:50+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 5,5   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 15 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 16 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 17 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 18 LIMIT 1   [ RunTime:0.0310s ]
+
+[ 2017-03-07T21:49:53+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 10,5   [ RunTime:0.0310s ]
+
+[ 2017-03-07T21:49:57+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 5,5   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0330s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 15 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 16 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 17 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 18 LIMIT 1   [ RunTime:0.0290s ]
+
+[ 2017-03-07T21:51:17+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0290s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 5,5   [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0320s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 15 LIMIT 1   [ RunTime:0.0330s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 16 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 17 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 18 LIMIT 1   [ RunTime:0.0330s ]
+
+[ 2017-03-07T21:52:08+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 10 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 11 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 12 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 13 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 14 LIMIT 1   [ RunTime:0.0300s ]
+
+[ 2017-03-07T22:21:48+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0320s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 10 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0320s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 11 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 12 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 13 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 14 LIMIT 1   [ RunTime:0.0330s ]
+NOTIC: [8] Undefined index: add_time D:\TortoiseSVNspace\onejobtest\Application\Mina\Controller\JobShowController.class.php 第 60 行.
+
+[ 2017-03-07T22:24:47+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0320s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 10 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0350s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 11 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 12 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 13 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 14 LIMIT 1   [ RunTime:0.0320s ]
+NOTIC: [8] Undefined index: add_time D:\TortoiseSVNspace\onejobtest\Application\Mina\Controller\JobShowController.class.php 第 60 行.
+
+[ 2017-03-07T22:27:50+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 10 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 11 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 12 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 13 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 14 LIMIT 1   [ RunTime:0.0290s ]
+
+[ 2017-03-07T22:27:54+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0330s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 10 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 11 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 12 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0280s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 13 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 14 LIMIT 1   [ RunTime:0.0290s ]
+
+[ 2017-03-07T22:27:55+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0350s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 10 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 11 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 12 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 13 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 14 LIMIT 1   [ RunTime:0.0290s ]
+
+[ 2017-03-07T22:27:57+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 10 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 11 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 12 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 13 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 14 LIMIT 1   [ RunTime:0.0300s ]
+
+[ 2017-03-07T22:28:07+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0290s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 10 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0280s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 11 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0280s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 12 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0280s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 13 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0280s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 14 LIMIT 1   [ RunTime:0.0360s ]
+
+[ 2017-03-07T22:28:08+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0290s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0440s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0280s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 10 LIMIT 1   [ RunTime:0.0280s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0280s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0280s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 11 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 12 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 13 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 14 LIMIT 1   [ RunTime:0.0280s ]
+
+[ 2017-03-07T22:28:10+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 10 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 11 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 12 LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0330s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 13 LIMIT 1   [ RunTime:0.0330s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 14 LIMIT 1   [ RunTime:0.0300s ]
+
+[ 2017-03-07T22:28:19+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 10 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0320s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 11 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 12 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 13 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0330s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 14 LIMIT 1   [ RunTime:0.0340s ]
+
+[ 2017-03-07T22:31:07+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment?jid=770&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 10 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 11 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 12 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 13 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 14 LIMIT 1   [ RunTime:0.0300s ]
+

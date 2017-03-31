@@ -1,0 +1,31 @@
+{__NOLAYOUT__}
+<empty name="jobs">
+    <p id="no-ajax-content" style="text-align: center;font-size: 16px;color: #575151;padding: 15px 0 18px 0;">没有更多了</p>
+    <else />
+    <foreach name="jobs" item="job" >
+        <a href="{:U('Mobile/JobShow/index',array('jid'=>$job['jid']))}">
+            <div class="newList">
+                <div>
+                    <span class="jobName">{$job['name']}</span>
+                    <span class="price">{$job['salary_low']}k~{$job['salary_high']}k</span>
+                </div>
+                <span class="conName">{$job['c_name']}</span>
+
+                <div class="require">
+                    <div>
+                        <img src="{$Think.config.MB_IMG_URL}icon/study.png" alt="">
+                        {$job['edu']}
+                    </div>
+                    <div>
+                        <img src="{$Think.config.MB_IMG_URL}icon/time.png" alt="">
+                        {$job['work_year']}
+                    </div>
+                    <div>
+                        <img src="{$Think.config.MB_IMG_URL}icon/person (2).png">
+                        {$job['need_people']}
+                    </div>
+                </div>
+            </div>
+        </a>
+    </foreach>
+</empty>

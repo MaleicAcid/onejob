@@ -1,0 +1,389 @@
+
+    <div class="main">
+        <div class="information">
+            <div class="information-subNav">
+                <ul>
+                    <a href="{:U('Company/index')}"><li onclick="showDetail()"><i class=" icon-user-1"></i>企业资料</li></a>
+                    <li class="click-textarea"><i class="icon-wallet"></i>企业介绍</li>
+                    <a href="{:U('Company/manage_job')}"><li class="select"><i class="icon-window"></i>职位管理</li></a>
+                    <li><i class="icon-heart-empty"></i>我的收藏</li>
+                    <if condition="($company['state'] eq 1)">
+                        <a href="{:U('Company/show_identity')}"><li class="Enterprise-menu"><i class="icon-vimeo"></i>认证成功</li></a>
+                        <else />
+                        <a href="{:U('Company/show_identity')}"><li class="Enterprise-menu"><i class="icon-lock-7"></i>企业认证</li></a>
+                    </if>
+                    <li><i class="icon-database-2"></i>积分中心</li>
+                    <li><i class="icon-wallet"></i>钱包中心</li>
+
+                </ul>
+            </div>
+            <!--<div style="clear: both"></div>-->
+            <div class="information-content" style="overflow: hidden;height: auto;padding-bottom: 20px;">
+                <div class="data">
+                    <span>企业职位列表</span> <span></span>  <a onclick=is_complete_or_identity()>添加职位</a>
+                </div>
+                <div class="C-list">
+                    <ul id="add-content">
+                        <!--<li>-->
+                            <!--<a href="Position_management.html">-->
+                                <!--<p>体验店课程——上海店</p>-->
+                                <!--<div class="C-listBox">-->
+                                    <!--<div class="C-classify">-->
+                                        <!--<i class=" icon-address-1"></i>-->
+                                        <!--<span>0</span>-->
+                                    <!--</div>-->
+                                    <!--<div class="C-classify">-->
+                                        <!--<i class=" icon-address-1"></i>-->
+                                        <!--<span>1</span>-->
+                                    <!--</div>-->
+                                    <!--<div class="C-classify">-->
+                                        <!--<i class=" icon-address-1"></i>-->
+                                        <!--<span>0</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<div class="C-offon">-->
+                                <!--<span></span>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+                <div class="C-textarea">
+                    <textarea id="desc" name="desc" placeholder="请输入介绍" style="">{$company['desc']}</textarea>
+                    <a href="javascript:update_desc()" class="animate-ok">确认</a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <include file="Public:footer" />
+</div>
+<script src="{$Think.config.JS_URL}jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="{$Think.config.BK_JS_URL}layer1/layer.js"></script>
+<script>
+    function is_complete_or_identity() {
+        $.ajax({
+            type: "get",
+//            data : {'desc':desc},
+            url: "{:U('Company/is_complete_or_identity')}",
+            success: function (data) {
+                var msg = '完善信息并通过认证后可发布职位！';
+                if (data.complete_code == 1 && data.identity_code == 1) {
+                    window.location.href ="{:U('Company/add_job')}"
+                    console.log('可发布');
+                    return;
+                }
+                if (data.complete_code != 1) {
+                    msg = msg + '</br>提示:' + data.complete_msg
+                }
+
+                if (data.identity_code != 1) {
+                    msg = msg + '</br>' + "<a  style='color: #00a0e9' href={:U('Company/show_identity')}>" + data.identity_msg + '</a>'
+                }
+                layer.msg(msg,{
+//                    tips: 1,
+//                    offset: 't',
+                    shift: -1,
+//                    anim: 200,
+                    time: 2000
+                });
+
+                if (data.complete_code != 1) {
+                    setTimeout(function () {
+                        window.location.href ="{:U('Company/index')}"
+                    }, 2000);
+                }
+
+                if (data.identity_code != 1) {
+                    setTimeout(function () {
+                        window.location.href ="{:U('Company/show_identity')}"
+                    }, 2000);
+                }
+
+            }
+        });
+    }
+
+    function update_desc() {
+        var desc = $("#desc").val();
+        var url = "{:U('Company/update_desc')}"
+        $.ajax({
+            type : "post",
+            data : {'desc':desc},
+            url: url,
+            success: function(data)
+            {
+                if(data.status == 1){
+                    location.reload()
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    }
+
+    function send_code() {
+        var code = $("#code").val();
+        var url = "{:U('Company/check_tel_verify')}"
+        $.ajax({
+            type : "get",
+            data : {'code':code},
+            url: url,
+            success: function(data)
+            {
+                if(data.status == 1){
+                    location.reload()
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    }
+    function send_sms() {
+        var mobile = $("#mobile").val();
+        var url = "{:U('Company/send_tel_verify')}"
+        $.ajax({
+            type : "get",
+            data : {'mobile':mobile},
+            url: url,
+            success: function(data)
+            {
+                if(data){
+                    alert(data.msg);
+
+                }else{
+                    alert(data.msg);
+//                           $("#mycomment").append(data);
+//                            page++;
+                }
+            }
+        });
+    }
+
+    function hide_or_show(obj) {
+        if(!$(obj).hasClass("C-off_hover")){
+            if(confirm("确定打开嘛？")){
+                do_show($(obj).attr('data-jid'),obj)
+            }
+        }else{
+            if(confirm("确定关闭嘛？")){
+                do_hide($(obj).attr('data-jid'),obj)
+            }
+        }
+    }
+
+    function do_show(jid,obj) {
+        var url = "{:U('Company/show_job')}";
+        $.ajax({
+            type : "get",
+            data : {'jid':jid},
+            url: url,
+            success: function(data)
+            {
+                if(data.status == 1){
+                    $(obj).addClass("C-off_hover");
+                }else{
+//                           $("#mycomment").append(data);
+//                            page++;
+                }
+            }
+        });
+    }
+    function do_hide(jid,obj) {
+        var url = "{:U('Company/hide_job')}";
+        $.ajax({
+            type : "get",
+            data : {'jid':jid},
+            url: url,
+            success: function(data)
+            {
+                if(data.status == 1){
+                    $(obj).removeClass("C-off_hover");
+                }else{
+//                           $("#mycomment").append(data);
+//                            page++;
+                }
+            }
+        });
+    }
+    function getObjectURL(file) {
+        var url = null ;
+        if (window.createObjectURL!=undefined) {
+            url = window.createObjectURL(file) ;
+        } else if (window.URL!=undefined) {
+            url = window.URL.createObjectURL(file) ;
+        } else if (window.webkitURL!=undefined) {
+            url = window.webkitURL.createObjectURL(file) ;
+        }
+        return url ;
+    }
+
+    $(function () {
+        $("#imghead").click(function(){
+            $("#upload").click();
+        });
+        $("#upload").change(function(){
+            var objUrl = getObjectURL(this.files[0]) ;
+            $("#imghead").attr("src",objUrl);
+        });
+
+
+        $('.information-subNav li').click(function () {
+            $('.information-subNav li').removeClass('select');
+            $(this).addClass('select');
+        })
+
+        $(".click-textarea").click(function(){
+            $(".open-position").hide();
+            $(".C-list").hide();
+            $(".C-certification-box").hide();
+            $(".C-textarea").show();
+            $(".C-textarea").find("textarea").show();
+            $(".C-textarea").find("a").show();
+        });
+        $(".animate-ok").click(function(){
+            $(".open-position").show();
+            $(".C-list").show();
+            $(".C-textarea").find("textarea").hide();
+            $(".C-textarea").find("a").hide();
+        });
+
+        $(".C-edit a").click(function(){
+
+            if($(".C-edit a").html()=="编辑"){
+                $(".com-manage").find("input").removeAttr("disabled").css("border","#ddd 1px solid");
+                $(".C-edit a").html("保存");
+            }else{
+//                $(".C-edit a").html("编辑");
+//                $(".com-manage").find("input").attr("disabled","disabled").css("border","0");
+//                var name = $('#name').val()
+//                var email = $('#email').val()
+//                var trade = $('#trade').val()
+//                var invest = $('#invest').val()
+//                var scale = $('#scale').val()
+//                var address = $('#address').val()
+                var identityAuth = new FormData(document.getElementById("identityAuth"));
+                var url = "{:U('Home/Company/update_detail')}";
+                $.ajax({
+                    type : "post",
+//                    data : {name:name,email:email,trade:trade,invest:invest,scale:scale,address:address},
+                    data : identityAuth,
+                    processData:false,
+                    contentType:false,
+                    url: url,
+                    success: function(data)
+                    {
+                        if(data.status == 1) {
+                            location.reload()
+                        }else{
+                            alert(data.msg)
+                        }
+                    }
+                });
+            }
+        });
+
+        $(".C-offon span").click(function(){
+            if(!$(this).hasClass("C-off_hover")){
+                if(confirm("确定打开嘛？")){
+                    $(this).addClass("C-off_hover");
+                }
+            }else{
+                if(confirm("确定关闭嘛？")){
+                    $(this).removeClass("C-off_hover");
+                }
+            }
+        });
+
+//        $(".Enterprise-menu").click(function(){
+//            $(".open-position").hide();
+//            $(".C-list").hide();
+//            $(".C-textarea").hide();
+//            $(".C-certification-box").show();
+//            $(".C-certification-box form").show();
+//        });
+
+        $(".certification-menu ul li").click(function(){
+            $(this).addClass("certification-hover").siblings().removeClass("certification-hover");
+        });
+    })
+</script>
+    <script type="text/javascript">
+        var page = 1;
+        var reg ="no-ajax-content"; //匹配<p>标签判断获取的页面是否没有更多了
+        var newPage = true;
+        var url = "{:U('Company/get_company_job')}";
+        function get_company_job(){
+            //$('.get_more').show();
+            if(newPage){
+                $.ajax({
+                    type : "get",
+                    data : {'p':page,is_ajax:1},
+                    url: url,
+                    dataType:'html',
+                    success: function(data)
+                    {
+                        var tmp = data;
+                        if(data){
+                            //alert($(data).attr("id") );
+                            $("#add-content").append(data);
+                            page++;
+                            if(tmp.match(reg)){
+                                //如果是no-ajax-content则标记为false
+                                newPage = false;
+                            }
+                        }else{
+//                           $("#mycomment").append(data);
+//                            page++;
+                        }
+                    }
+                });
+            }
+
+        }
+        $(document).ready(function(){
+            get_company_job()
+
+        });
+        function getScrollTop(){
+            var scrollTop = 0, bodyScrollTop = 0, documentScrollTop = 0;
+            if(document.body){
+                bodyScrollTop = document.body.scrollTop;
+            }
+            if(document.documentElement){
+                documentScrollTop = document.documentElement.scrollTop;
+            }
+            scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+            return scrollTop;
+        }
+        //文档的总高度
+        function getScrollHeight(){
+            var scrollHeight = 0, bodyScrollHeight = 0, documentScrollHeight = 0;
+            if(document.body){
+                bodyScrollHeight = document.body.scrollHeight;
+            }
+            if(document.documentElement){
+                documentScrollHeight = document.documentElement.scrollHeight;
+            }
+            scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight;
+            return scrollHeight;
+        }
+        //浏览器视口的高度
+        function getWindowHeight(){
+            var windowHeight = 0;
+            if(document.compatMode == "CSS1Compat"){
+                windowHeight = document.documentElement.clientHeight;
+            }else{
+                windowHeight = document.body.clientHeight;
+            }
+            return windowHeight;
+        }
+        window.onscroll = function(){
+            if(getScrollTop() + getWindowHeight() == getScrollHeight()){
+                get_company_job();
+            }
+        };
+    </script>
+</body>
+</html>

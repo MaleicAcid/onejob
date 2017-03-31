@@ -1,0 +1,548 @@
+ul,li{
+	list-style: none;
+}
+
+
+.C-textarea{
+	width: 800px;
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.C-textarea textarea{
+	width: 780px;
+	height: 280px;
+	padding: 10px;
+	display: none;
+	border: #ddd 1px solid;
+}
+.C-textarea a{
+	width: 100px;
+	height: 30px;
+	border: #ddd 1px solid;
+	border-radius: 4px;
+	float: left;
+	margin-top: 20px;
+	text-align: center;
+	line-height: 30px;
+	display: none;
+}
+
+
+.C-edit{
+	float: right;
+	width: 38px;
+	height: auto;
+	overflow: hidden;
+}
+.C-pic{
+	display: block;
+	width: 38px;
+	height: 30px;
+	overflow: hidden;
+}
+.C-pic img{
+	width: 100%;
+}
+.C-edit a{
+	width: 38px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+}
+
+
+
+.C-fuck{
+    width: 880px;
+    height: 100px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+.C-fuck div{
+	display: block;
+	margin: 0 auto;
+	width: 500px;
+	height: 100px;
+	line-height: 100px;
+}
+.C-fuck div p{
+	width: 100px;
+	height: 100px;
+	float: left;
+	font-size: 22px;
+}
+.C-fuck div span{
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 22px;
+}
+
+/*.introduce{
+	width: 880px;
+	height: 100px;
+}*/
+.introduce ul{
+	width: 100%;
+	height: 100px;
+	overflow: hidden;
+}
+.introduce ul li{
+	list-style: none;
+	width: 200px;
+	height: 100px;
+	float: left;
+	margin-left: 20px;
+	
+}
+.introduce ul li i{
+	width: 20px;
+	height: 20px;
+	margin-top: 39px;
+	float: left;
+	margin-right: 10px;
+}
+.introduce ul li p{
+	width: 170px;
+	height: 100px;
+	float: left;
+	line-height: 100px;
+}
+
+
+/*职位管理*/
+.C-list{
+	height: auto;
+	width: 800px;
+	margin-top: 20px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+.C-list ul{
+	height: auto;
+	overflow: hidden;
+}
+.C-list ul li{
+	width: 100%;
+	height: 100px;
+	border-bottom: #ddd 1px solid;
+}
+.C-list ul li a{
+	width: 700px;
+	height: 100px;
+	float: left;
+	display: block;
+}
+.C-list ul li a p{
+	height: 50px;
+	width: 500px;
+	line-height: 50px;
+	overflow: hidden;
+}
+.C-list ul li a .C-listBox{
+	width: 100%;
+	height: 50px;
+}
+.C-list ul li a .C-classify{
+	width: 180px;
+	height: 50px;
+	float: left;
+	overflow: hidden;
+}
+.C-classify i{
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-top: 15px;
+	float: left;
+	vertical-align: top;
+}
+.C-classify span{
+	width: 150px;
+	height: 50px;
+	overflow: hidden;
+	float: left;
+	margin-left: 10px;
+	line-height: 50px;
+}
+
+.C-offon{
+	width: 100px;
+	height: 100px;
+	float: right;
+}
+.C-offon span{
+	display: block;
+	width: 80px;
+	height: 30px;
+	margin: 0 auto;
+	border: #ddd 1px solid;
+	border-radius: 15px;
+	margin-top: 35px;
+	position: relative;
+	-webkit-transition: background .7s;
+	transition: background .7s;
+}
+.C-offon span:after{
+	content: "";
+	display: block;
+	width: 28px;
+	height: 28px;
+	border: #999 1px solid;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transition: left .5s;
+	transition: left .5s;
+}
+span.C-off_hover{
+	background: #00f;
+}
+span.C-off_hover:after{
+	content: "";
+	display: block;
+	width: 28px;
+	height: 28px;
+	border: #999 1px solid;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 50px;
+	background: #fff;
+}
+
+
+
+/*职位管理*/
+.C-position{
+	width: 880px;
+	height: auto;
+	overflow: hidden;
+	background: #fff;
+}
+.C-position-Box{
+	width: 800px;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.C-position-name{
+	width: 800px;
+	height: 52px;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+.C-position-name input{
+	width: 500px;
+	height: 50px;
+	overflow: hidden;
+	float: left;
+	border: none;
+	background: #fff;
+}
+.C-position-name input:last-child{
+	width: 200px;
+	height: 50px;
+	overflow: hidden;
+	float: right;
+}
+
+.C-position-Record{
+	width: 800px;
+	height: 52px;
+	border-bottom: #ddd 1px solid;
+}
+.C-position-Record ul{
+	width: 100%;
+	height: 52px;
+}
+.C-position-Record ul li{
+	width: 200px;
+	height: 52px;
+	float: left;
+}
+.C-position-Record ul li i{
+	width: 20px;
+	height: 20px;
+	margin-top: 15px;
+	float: left;
+}
+.C-position-Record ul li input{
+	width: 150px;
+	height: 50px;
+	border: none;
+	background: #fff;
+}
+
+.C-position-text{
+	width: 800px;
+	height: auto;
+	overflow: hidden;
+}
+.C-position-text p{
+	width: 800px;
+	height: 50px;
+	border-bottom: #ddd 1px solid;
+	line-height: 50px;
+}
+.C-position-text textarea{
+	width: 778px;
+	height: 180px;
+	margin-top: 10px;
+	padding: 10px;
+}
+.C-position-menu{
+	width: auto;
+	height: 50px;
+	margin-top: 20px;
+	
+}
+.C-position-menu a{
+	display: block;
+	width: 100px;
+	height: 50px;
+	float: left;
+	line-height: 50px;
+	text-align: center;
+	border: #ddd 1px solid;
+	border-radius: 4px;
+	margin-right: 10px;
+}
+
+
+
+/*企业认证*/
+#certification{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.Chorder-menu-date{
+	width: 800px;
+	height: 100px;
+	overflow: hidden;
+	margin: 20px 0;
+}
+.Chorder-menu-date input{
+	width: 300px;
+	height: 50px;
+	margin: 0 auto;
+	display: block;
+	border: #ddd 1px solid;
+	border-radius: 6px;
+}
+.Chorder-menu-date span{
+	width: 300px;
+	height: 50px;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 50px;
+	color: #f00;
+}
+.certification-box{
+	width: 800px;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+	background: #fff;
+	padding: 50px 0;
+	margin-top: 20px;
+}
+.certification-box p{
+	height: auto;
+	line-height: 50px;
+	text-align: center;
+}
+.certification-menu{
+	width: 400px;
+	height: 100px;
+	overflow: hidden;
+	margin: 20px auto;
+	border: #0000FF 1px solid;
+	border-radius: 4px;
+}
+.certification-menu ul{
+	width: 400px;
+	height: 100px;
+	overflow: hidden;
+}
+.certification-menu ul li{
+	width: 200px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	line-height: 100px;
+	cursor: pointer;
+}
+.certification-hover{
+	background: #0000FF;
+	color: #fff;
+	border-radius: 4px;
+}
+.certification-dete{
+	width: 100px;
+	height: 30px;
+	margin: 20px auto 0;
+	background: #0000FF;
+	color: #fff;
+	border-radius: 4px;
+	text-align: center;
+	line-height: 30px;
+	position: relative;
+	cursor: pointer;
+}
+.certification-dete input{
+	width: 100px;
+	height: 30px;
+	background: #0000FF;
+	color: #fff;
+	border-radius: 4px;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+
+
+
+/*企业详情*/
+.enterprise{
+	width: 800px;
+	height: auto;
+	overflow: hidden;
+	padding: 20px 0;
+	/*display: inline-block;*/
+	background: #fff;
+	float: left;
+}
+.enterprise-logo{
+	width: 700px;
+	height: 200px;
+	border-bottom: #ddd 1px solid;
+	margin: 0 auto;
+}
+.enterprise-logoBox{
+	width: 200px;
+	height: 180px;
+	margin: 25px auto 0;
+}
+.enterprise-logoBox img{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto;
+}
+.enterprise-logoBox span{
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	display: block;
+	overflow: hidden;
+	margin: 20px auto 0;
+}
+.enterprise-nature{
+	width: 700px;
+	height: auto;
+	border-bottom: #ddd 1px solid;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.enterprise-nature ul{
+	width: 700px;
+	height: auto;
+	overflow: hidden;
+}
+.enterprise-nature ul li{
+	width: 700px;
+	height: auto;
+	overflow: hidden;
+}
+.enterprise-nature ul li div{
+	width: 100px;
+	height: 50px;
+	float: left;
+	line-height: 50px;
+	margin-right: 20px;
+	text-align: center;
+}
+.enterprise-nature ul li p{
+	width: 500px;
+	height: 50px;
+	overflow: hidden;
+	float: left;
+	line-height: 50px;
+}
+.enterprise-nature ul li span{
+	width: 660px;
+	height: auto;
+	display: block;
+	overflow: hidden;
+	line-height: 20px;
+	padding: 10px 20px 100px ;
+}
+
+
+
+.details-enterpriseInformation-introduce textarea{
+	width: 260px;
+	height: 150px;
+	text-indent: 28px;
+}
+.details-enterpriseInformation-introduce a{
+	width: 60px;
+	height: 30px;
+	border: #ddd 1px solid;
+	border-radius: 4px;
+	display: block;
+	text-align: center;
+	line-height: 30px;
+	float: right;
+	margin-top: 10px;
+}
+
+
+
+.C-certification-box form div{
+	width: 800px;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+}
+.Chorder-yanzhengma{
+	height: 36px;
+	width: 200px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+}
+.Chorder-yanzhengma input{
+	width: 116px;
+	height: 33px;
+	float: left;
+}
+.Chorder-yanzhengma a{
+	width: 80px;
+	height: 36px;
+	float: right;
+	text-align: center;
+	line-height: 36px;
+}
+
+.introduce ul{
+	height: auto;
+
+}
+.introduce ul li {
+	height: 63px;
+
+}
+.introduce ul li input{
+	vertical-align: text-bottom;
+}

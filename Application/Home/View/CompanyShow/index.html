@@ -1,0 +1,59 @@
+
+    <div class="main">
+        <div class="companiesList-main">
+            <div class="enterprise">
+            	<div class="enterprise-logo">
+            		<div class="enterprise-logoBox">
+            			<img src="{$res_com['logo']}"/>
+            			<span>{$res_com['name']}</span>
+            		</div>
+            	</div>
+            	<div class="enterprise-nature">
+            		<ul>
+            			<li>
+            				<div>行业：</div>
+            				<p>{$res_com['trade']}</p>
+            			</li>
+            			<li>
+            				<div>类型：</div>
+            				<p>{$res_com['invest']}</p>
+            			</li>
+            			<li>
+            				<div>规模：</div>
+            				<p>{$res_com['scale']}</p>
+            			</li>
+            		</ul>
+            	</div>
+            	<div class="enterprise-nature">
+            		<ul>
+            			<li>
+            				<div>地址：</div>
+            				<p>{$res_com['address']}</p>
+            			</li>
+            		</ul>
+            	</div>
+            	<div class="enterprise-nature" style="border-bottom: 0;">
+            		<ul>
+            			<li>
+            				<div>公司介绍：</div>
+            				<span>{$res_com['desc']}</span>
+            			</li>
+            		</ul>
+            	</div>
+            </div>
+            <div class="companiesList-subNav">
+                <ul>
+                    <li>热门企业</li>
+					<foreach name="hot_com" item="c" >
+						<a href="{:U('CompanyShow/index',array('id'=>$c['id']))}""><span href="{:U('CompanyShow/index',array('id'=>$c['id']))}" style="text-align:center;display: block;height: 10px;line-height: 5;">{$c['name']}</span></a>
+						<li><a href="{:U('CompanyShow/index',array('id'=>$c['id']))}"><img  style="width:150px;" src="{$c['logo']}" alt=""></a></li>
+					</foreach>
+                </ul>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+    <include file="Public:footer" />
+</div>
+</body>
+</html>

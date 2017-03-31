@@ -1,0 +1,290 @@
+
+    <div class="main">
+        <div class="personalCenter">
+            <div class="data">
+                <span>个人资料</span>
+            </div>
+            <input id="is_tel"  value="{$is_tel}" name="is_tel" type="hidden"/>
+            <div class="data-base">
+                <form id="identityAuth" action="">
+                <div class="image">
+                    <img id="imghead" src="{$user_info['head_pic']}" alt="" width="70" height="70">
+                </div>
+                <ul class="base">
+                    <li><i class="icon-user"></i><input type="text" name="realname" placeholder="请填写姓名" value="{$user_info['realname']}" class="info-input"><span class="info-value">{$user_info['realname']}</span></li>
+                    <input id="upload" style="display: none;" name="head_pic" type="file" accept="image/*;" />
+                    <!-- <li><i class="icon-phone-outline"></i><input type="text" name="" value="18888888888" class="info-input"><span class="info-value">18888888888</span>  </li> -->
+                    <!-- <li><i class=" icon-wechat"></i>18888888888</li> -->
+                    <ul class="m">
+                        <li><i class="icon-school"></i><input type="text" name="school" placeholder="请填写学校" value="{$user_info['school']}" class="info-input"><span class="info-value">{$user_info['school']}</span></li>
+                        <li><i class=" icon-doc-remove"></i><input type="text" name="major" placeholder="请填写专业"value="{$user_info['major']}" class="info-input"><span class="info-value">{$user_info['major']}</span></li>
+                        <li><i class=" icon-user-7"></i>
+                            <select name="sex" class="study sex">
+                                <foreach name="user_sex" item="v" key="k">
+                                    <option value="{$k}" name="sex">{$v}</option>
+                                </foreach>
+                            </select>
+                            <span class="info-value">{$user_info['sex']}</span>
+                        </li>
+                        <li><i class=" icon-doc-text-2"></i>
+                            <select name="edu" class="study edu">
+                                <foreach name="job_edu" item="v" key="k">
+                                    <option value="{$k}" name="edu">{$v}</option>
+                                </foreach>
+                            </select>
+                            <span class="info-value">{$user_info['edu']}</span>
+                        </li>
+                        <li><i class=" icon-back-in-time"></i><input type="text" name="entry_year" placeholder="请填写入学年份" value="{$user_info['entry_year']}" class="info-input"><span class="info-value">{$user_info['entry_year']}</span></li>
+                        <li><i class=" "></i></li>
+                    </ul>
+                    <ul class="phone">
+                        <li><i class="icon-phone-outline"></i><input type="text" id="mobile" name="tel" placeholder="请绑定手机" value="{$user_info['tel']}" class="info-input"><span class="info-value">{$user_info['tel']}</span></li>
+                        <if condition="$is_tel neq 1">
+                            <li>
+                                <div class="Chorder-yanzhengma1">
+                                    <input id="code" type="text" />
+                                    <a href="javascript:send_code()">绑定</a>
+                                    <a href="javascript:send_sms()">发送验证码</a>
+                                </div>
+                            </li>
+                            <else />
+                        </if>
+
+                    </ul>
+
+                </ul>
+
+                <div class="editor">
+                    <img src="{$Think.config.IMG_URL}editor.png" alt="">
+                    <span class="save">保存</span>
+                </div>
+                </form>
+            </div>
+            <div class="personalCenter-content">
+                <div class="ss">
+                    <p class="select">我的收藏</p>
+                    <p>我的分享</p>
+                </div>
+                <div class="position-content">
+                    <ul id="add-content">
+                        <!--<li>-->
+                            <!--<div class="left">-->
+                                <!--<h1>UI设计师</h1>-->
+                                <!--<div class="requirements">-->
+                                    <!--<span>本科</span>-->
+                                    <!--<span>3~5年</span>-->
+                                    <!--<span>3人</span>-->
+                                <!--</div>-->
+                                <!--<div class="time">发布时间：<span>2017.2.19</span><span>19:00</span></div>-->
+                            <!--</div>-->
+                            <!--<div class="right">-->
+                                <!--<div class="salary">8~10k</div>-->
+                                <!--<div><img src="{$Think.config.IMG_URL}a.png" alt=""></div>-->
+                                <!--<div class="name">公司名称公司名称</div>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <include file="Public:footer" />
+</div>
+<script type="text/javascript" src="{$Think.config.JS_URL}jquery-3.1.0.js"></script>
+<script type="text/javascript" src="{$Think.config.BK_JS_URL}layer1/layer.js"></script>
+    <script type="text/javascript">
+        var page = 1;
+        var reg ="no-ajax-content"; //匹配<p>标签判断获取的页面是否没有更多了
+        var newPage = true;
+        var url = "{:U('User/job_collect')}";
+        function get_user_job(){
+            //$('.get_more').show();
+            if(newPage){
+                $.ajax({
+                    type : "get",
+                    data : {'p':page,is_ajax:1},
+                    url: url,
+                    dataType:'html',
+                    success: function(data)
+                    {
+                        var tmp = data;
+                        if(data){
+                            //alert($(data).attr("id") );
+                            $("#add-content").append(data);
+                            page++;
+                            if(tmp.match(reg)){
+                                //如果是no-ajax-content则标记为false
+                                newPage = false;
+                            }
+                        }else{
+//                           $("#mycomment").append(data);
+//                            page++;
+                        }
+                    }
+                });
+            }
+
+        }
+        $(document).ready(function(){
+            get_user_job()
+
+        });
+        function getScrollTop(){
+            var scrollTop = 0, bodyScrollTop = 0, documentScrollTop = 0;
+            if(document.body){
+                bodyScrollTop = document.body.scrollTop;
+            }
+            if(document.documentElement){
+                documentScrollTop = document.documentElement.scrollTop;
+            }
+            scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+            return scrollTop;
+        }
+        //文档的总高度
+        function getScrollHeight(){
+            var scrollHeight = 0, bodyScrollHeight = 0, documentScrollHeight = 0;
+            if(document.body){
+                bodyScrollHeight = document.body.scrollHeight;
+            }
+            if(document.documentElement){
+                documentScrollHeight = document.documentElement.scrollHeight;
+            }
+            scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight;
+            return scrollHeight;
+        }
+        //浏览器视口的高度
+        function getWindowHeight(){
+            var windowHeight = 0;
+            if(document.compatMode == "CSS1Compat"){
+                windowHeight = document.documentElement.clientHeight;
+            }else{
+                windowHeight = document.body.clientHeight;
+            }
+            return windowHeight;
+        }
+        window.onscroll = function(){
+            if(getScrollTop() + getWindowHeight() == getScrollHeight()){
+                get_user_job();
+            }
+        };
+    </script>
+<script type="text/javascript">
+    function setSelect() {
+        var sex = "{$map.sex}";
+        var edu = "{$map.edu}";
+        if(sex != ''){
+            $(".sex").val(sex);
+        }
+        if(edu != ''){
+            $(".edu").val(edu);
+        }
+
+    }
+
+    function send_code() {
+        var code = $("#code").val();
+        var url = "{:U('User/check_tel_verify')}"
+        $.ajax({
+            type : "get",
+            data : {'code':code},
+            url: url,
+            success: function(data)
+            {
+                if(data.status == 1){
+                    $('#is_tel').val(1);
+                    alert('绑定成功！请在刷新前保存其他资料信息！');
+//                    location.reload()
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    }
+    function send_sms() {
+        var mobile = $("#mobile").val();
+        var url = "{:U('User/send_tel_verify')}"
+        $.ajax({
+            type : "get",
+            data : {'mobile':mobile},
+            url: url,
+            success: function(data)
+            {
+                if(data){
+                    alert(data.msg);
+
+                }else{
+                    alert(data.msg);
+//                           $("#mycomment").append(data);
+//                            page++;
+                }
+            }
+        });
+    }
+
+    function getObjectURL(file) {
+        var url = null ;
+        if (window.createObjectURL!=undefined) {
+            url = window.createObjectURL(file) ;
+        } else if (window.URL!=undefined) {
+            url = window.URL.createObjectURL(file) ;
+        } else if (window.webkitURL!=undefined) {
+            url = window.webkitURL.createObjectURL(file) ;
+        }
+        return url ;
+    }
+
+
+    $(function () {
+        setSelect();
+        $("#imghead").click(function(){
+            layer.msg('请选择2M以下的图片文件', {
+                offset: 't',
+                shift: -1,
+                anim: 10
+            });
+            $("#upload").click();
+        });
+        $("#upload").change(function(){
+            var objUrl = getObjectURL(this.files[0]) ;
+            $("#imghead").attr("src",objUrl);
+        });
+
+
+        //编辑个人信息
+        $('.editor').click(function() {
+            $('.info-input').css({display:'inline-block'});
+            $('.study').css({display:'inline-block'});
+            $('.save').css({display:'inline-block'});
+            $('.info-value').css({display:'none'});
+            $(this).find('img').css({display:'none'});
+        });
+        //信息保存
+        $('.editor .save').click(function() {
+            if($('#is_tel').val() != 1){
+                alert('请先绑定手机')
+                return;
+            }
+            $('.info-input').css({display:'none'});
+            var identityAuth = new FormData(document.getElementById("identityAuth"));
+            var url = "{:U('Home/User/update_detail')}";
+            $.ajax({
+                type : "post",
+//                    data : {name:name,email:email,trade:trade,invest:invest,scale:scale,address:address},
+                data : identityAuth,
+                processData:false,
+                contentType:false,
+                url: url,
+                success: function(data)
+                {
+                    if(data.status == 1) {
+                        location.reload()
+                    }else{
+                        alert(data.msg)
+                    }
+                }
+            });
+        });
+    })
+</script>
+</body>
+</html>

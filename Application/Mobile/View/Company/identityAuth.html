@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>identify</title>
+    <meta name="viewport" content="width=device-width , initial-scale=1 , minimum-scale=1.0 , maximum-scale=1.0 , user-scalable=no"/>
+    <link rel="stylesheet" href="{$Think.config.MB_CSS_URL}reset.css"/>
+    <link rel="stylesheet" type="text/css" href="{$Think.config.MB_CSS_URL}common.css">
+    <style type="text/css">
+        @media screen and (min-width: 320px){
+
+        }
+        body{background-color: #fff;font-family: 'Microsoft YaHei';}
+        .content{padding: 10%;font-size: 14px;text-align: center;}
+        .content .swiper{border:1px solid #2EACFD;border-radius: 5px;height: 102px;margin:20% auto;}
+        .content .check-wrap{border-radius: 5px;width: 49%;display: inline-block;box-sizing: border-box;line-height: 100px;text-align: center;}
+        .content .btn-wrap{margin-top: 10%;}
+        .btn-wrap div{position: relative;display: inline-block;width:49%;}
+        .btn-wrap div input{width:90%;opacity: 0;filter: alpha(opacity=0);position: absolute;z-index: 99;left:0;top:0;}
+        .content .photo{border-radius: 5px;width:100%;padding: 8px 25%;background-color:#2EACFD;color: #fff;}
+    </style>
+</head>
+<body>
+<header class="blue">
+    <a href="javascript:history.go(-1)"><img src="{$Think.config.MB_IMG_URL}icon/Left (1).png" width="16px" height="16px" /></a><span>企业认证</span>
+</header>
+<div class="content">
+    <form id="identityAuth" enctype="multipart/form-data">
+        <span>第一步：填写企业全名和简称<br/>（<em class="other">输入的企业全名请和上传证件中保持一致</em>）</span>
+        <div class="btn-wrap">
+            公司名：
+            <input type="text" name="name"/></br>
+            <!--简称：-->
+                <!--<input type="text" name="short_name"/>-->
+            <input type="hidden" name="id" value="{$com_id}"/>
+        </div></br>
+        <span>第二步：选择认证材料类型（2选1）</span>
+        <div class="swiper">
+			<span class="check-wrap blue-txt">
+				营业执照
+			</span>
+            <input class="camera" type="hidden" name=""/>
+            <span class="check-wrap">
+				工牌
+			</span>
+            <input class="select" type="hidden" name="licence_type"/>
+        </div>
+        <span>第三步：拍摄提交证明材料<br/>（您选择提交<em class="checkedTxt"> 营业执照 </em>）</span>
+        <div class="btn-wrap">
+            <div>
+                <input type="file" name="licence" id="licence"/>
+                <span class="photo">选择照片</span>
+            </div>
+            <!--<div>-->
+                <!--<input type="file" name="licence2" id="licence2"/>-->
+                <!--<span class="photo">相册照片</span>-->
+            <!--</div>-->
+
+        </div>
+        <div id="pic_dv"><img src="" alt="" id="pic_im" width="160" height="160" /></div>
+        <button type="button" style="margin-top: 100px;" class="btn btn-small btn-primary" onclick="upload_auth()">
+            确认
+        </button>
+    </form>
+</div>
+
+<script type="text/javascript" src="{$Think.config.MB_JS_URL}jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/HomeStyle/js/uploadPreview.js"></script>
+<script type="text/javascript">
+    $(function(){
+        new uploadPreview({ UpBtn: "licence", DivShow: "pic_dv", ImgShow: "pic_im" });
+    });
+</script>
+<script type="text/javascript">
+function upload_auth() {
+    var data = new FormData(document.getElementById("identityAuth"));
+    var url = "{:U('Company/identityAuth')}"
+    $.ajax({
+        url : url,
+        type : 'post',
+        data : data,
+        processData:false,
+        contentType:false,
+        success : function(res)
+        {
+            if(res.code == 1){
+                window.location.href = "{:U('Company/index')}"
+            }else if(res.code == -2) {
+                alert('请选择图片!');
+            }else{
+                alert('服务器繁忙,请稍候再试!');
+            }
+        }
+    });
+};
+
+
+</script>
+<script type="text/javascript">
+    function sibling( elem ) {
+        var r = [];
+        var n = elem.parentNode.firstChild;
+        for ( ; n; n = n.nextSibling ) {
+            if ( n.nodeType === 1 && n !== elem ) {
+                r.push( n );
+            }
+        }
+        return r;
+    }
+
+    var upPhoto = document.getElementsByClassName("photo");
+    var camera = document.getElementsByClassName("camera")[0];
+    var select = document.getElementsByClassName("select")[0];
+    var checkedItem = document.getElementsByClassName("check-wrap");
+    var checkedTxt	= document.getElementsByClassName("checkedTxt")[0];
+
+    camera.value = "1";
+
+    checkedItem[0].addEventListener("click",function(){
+        this.setAttribute("class","check-wrap blue-txt");
+        camera.value = '';
+        select.value = '1';
+        checkedTxt.innerHTML	 = this.innerHTML;
+        sibling(this)[1].setAttribute("class","check-wrap");
+    },false);
+    checkedItem[1].addEventListener("click",function(){
+        this.setAttribute("class","check-wrap blue-txt");
+        camera.value = '';
+        select.value = '2';
+        checkedTxt.innerHTML	 = this.innerHTML;
+        sibling(this)[0].setAttribute("class","check-wrap");
+    },false);
+
+</script>
+</body>
+</html>

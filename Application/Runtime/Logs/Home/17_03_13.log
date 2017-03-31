@@ -1,0 +1,562 @@
+[ 2017-03-13T00:14:26+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_job` WHERE `state` = 1 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `jid`,`edu`,`work_year`,`need_people`,`company_id`,`salary_high`,`salary_low`,`name`,`create_time` FROM `oj_job` WHERE `state` = 1 ORDER BY is_top LIMIT 0,10   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 318 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 22 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0290s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: user D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 21 行.
+NOTIC: [8] Undefined index: company D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 24 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\TortoiseSVNspace\onejobtest\index.php 第 25 行.
+
+[ 2017-03-13T00:14:28+08:00 ] 127.0.0.1 /index.php/Home/JobShow/index/jid/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_job` WHERE `jid` = 4 AND `state` = 1 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_company` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0280s ]
+SQL: SHOW COLUMNS FROM `oj_user_collect_job` [ RunTime:0.0300s ]
+NOTIC: [8] Undefined index: user D:\TortoiseSVNspace\onejobtest\Application\Home\Logic\JobLogic.class.php 第 68 行.
+SQL: SELECT * FROM `oj_user_collect_job` WHERE `job_id` = 4 AND `user_id` = null LIMIT 1   [ RunTime:0.0280s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: user D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\fb70d8828d4b71e3f75ad31a81f46287.php 第 21 行.
+NOTIC: [8] Undefined index: company D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\fb70d8828d4b71e3f75ad31a81f46287.php 第 24 行.
+NOTIC: [8] Undefined variable: val D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\fb70d8828d4b71e3f75ad31a81f46287.php 第 59 行.
+NOTIC: [8] Undefined index: short_name D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\fb70d8828d4b71e3f75ad31a81f46287.php 第 60 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: page D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\fb70d8828d4b71e3f75ad31a81f46287.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\TortoiseSVNspace\onejobtest\index.php 第 25 行.
+
+[ 2017-03-13T00:14:29+08:00 ] 127.0.0.1 /index.php/Home/JobShow/get_job_comment.html?p=1&jid=4&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 4 AND `pid` = 0 LIMIT 1   [ RunTime:0.0310s ]
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 4 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 326 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `head_pic` FROM `oj_user` WHERE `id` = 326 LIMIT 1   [ RunTime:0.0330s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 4 AND `pid` = 38 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 326 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `head_pic` FROM `oj_user` WHERE `id` = 326 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 4 AND `pid` = 37 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `head_pic` FROM `oj_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 4 AND `pid` = 21 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `head_pic` FROM `oj_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 4 AND `pid` = 22 LIMIT 1   [ RunTime:0.0330s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `head_pic` FROM `oj_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 4 AND `pid` = 23 LIMIT 1   [ RunTime:0.0290s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: reply D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 18 行.
+NOTIC: [8] Undefined variable: is_author D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 30 行.
+NOTIC: [8] Undefined index: reply D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 18 行.
+NOTIC: [8] Undefined variable: is_author D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 30 行.
+NOTIC: [8] Undefined index: reply D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 18 行.
+NOTIC: [8] Undefined variable: is_author D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 30 行.
+NOTIC: [8] Undefined index: reply D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 18 行.
+NOTIC: [8] Undefined variable: is_author D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 30 行.
+NOTIC: [8] Undefined index: reply D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 18 行.
+NOTIC: [8] Undefined variable: is_author D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\TortoiseSVNspace\onejobtest\index.php 第 25 行.
+
+[ 2017-03-13T00:14:30+08:00 ] 127.0.0.1 /index.php/Home/JobShow/get_job_comment.html?p=1&jid=4&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 4 AND `pid` = 0 LIMIT 1   [ RunTime:0.0300s ]
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 4 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0320s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 326 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT `head_pic` FROM `oj_user` WHERE `id` = 326 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 4 AND `pid` = 38 LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 326 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT `head_pic` FROM `oj_user` WHERE `id` = 326 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 4 AND `pid` = 37 LIMIT 1   [ RunTime:0.0330s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `head_pic` FROM `oj_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 4 AND `pid` = 21 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `head_pic` FROM `oj_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 4 AND `pid` = 22 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `head_pic` FROM `oj_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 4 AND `pid` = 23 LIMIT 1   [ RunTime:0.0310s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: reply D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 18 行.
+NOTIC: [8] Undefined variable: is_author D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 30 行.
+NOTIC: [8] Undefined index: reply D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 18 行.
+NOTIC: [8] Undefined variable: is_author D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 30 行.
+NOTIC: [8] Undefined index: reply D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 18 行.
+NOTIC: [8] Undefined variable: is_author D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 30 行.
+NOTIC: [8] Undefined index: reply D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 18 行.
+NOTIC: [8] Undefined variable: is_author D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 30 行.
+NOTIC: [8] Undefined index: reply D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 18 行.
+NOTIC: [8] Undefined variable: is_author D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\TortoiseSVNspace\onejobtest\index.php 第 25 行.
+
+[ 2017-03-13T19:31:55+08:00 ] 127.0.0.1 /index.php/Home/JobShow/index/jid/770.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_job` WHERE `jid` = 770 AND `state` = 1 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_company` WHERE ( id=15 ) LIMIT 1   [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `oj_user_collect_job` [ RunTime:0.0300s ]
+NOTIC: [8] Undefined index: user D:\TortoiseSVNspace\onejobtest\Application\Home\Logic\JobLogic.class.php 第 68 行.
+SQL: SELECT * FROM `oj_user_collect_job` WHERE `job_id` = 770 AND `user_id` = null LIMIT 1   [ RunTime:0.0280s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: user D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\fb70d8828d4b71e3f75ad31a81f46287.php 第 21 行.
+NOTIC: [8] Undefined index: company D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\fb70d8828d4b71e3f75ad31a81f46287.php 第 24 行.
+NOTIC: [8] Undefined variable: val D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\fb70d8828d4b71e3f75ad31a81f46287.php 第 59 行.
+NOTIC: [8] Undefined index: short_name D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\fb70d8828d4b71e3f75ad31a81f46287.php 第 60 行.
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+NOTIC: [8] Undefined variable: page D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\fb70d8828d4b71e3f75ad31a81f46287.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\TortoiseSVNspace\onejobtest\index.php 第 25 行.
+
+[ 2017-03-13T19:31:57+08:00 ] 127.0.0.1 /index.php/Home/JobShow/get_job_comment.html?p=1&jid=770&id=15
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 LIMIT 1   [ RunTime:0.0290s ]
+NOTIC: [8] Undefined index: m D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 977 行.
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0206s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 320 LIMIT 1   [ RunTime:0.0342s ]
+SQL: SELECT `head_pic` FROM `oj_user` WHERE `id` = 320 LIMIT 1   [ RunTime:0.0312s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 36 LIMIT 1   [ RunTime:0.0356s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 320 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `head_pic` FROM `oj_user` WHERE `id` = 320 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 35 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT `head_pic` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 10 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0380s ]
+SQL: SELECT `name` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `logo` FROM `oj_company` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0240s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0312s ]
+SQL: SELECT `head_pic` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0346s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 11 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `nickname` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT `head_pic` FROM `oj_user` WHERE `id` = 317 LIMIT 1   [ RunTime:0.0240s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 770 AND `pid` = 12 LIMIT 1   [ RunTime:0.0312s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: reply D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 18 行.
+NOTIC: [8] Undefined variable: is_author D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 30 行.
+NOTIC: [8] Undefined index: reply D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 18 行.
+NOTIC: [8] Undefined variable: is_author D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 30 行.
+NOTIC: [8] Undefined index: reply D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 18 行.
+NOTIC: [8] Undefined variable: is_author D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 30 行.
+NOTIC: [8] Undefined index: reply D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 18 行.
+NOTIC: [8] Undefined variable: is_author D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Home\3ffe81fe8eeaccca9a2a6c9e78f03cd4.php 第 30 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\TortoiseSVNspace\onejobtest\index.php 第 25 行.
+
+[ 2017-03-13T19:32:08+08:00 ] 127.0.0.1 /index.php/User/send_tel_verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-13T19:32:25+08:00 ] 127.0.0.1 /index.php/User/send_tel_verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-03-13T19:46:31+08:00 ] 127.0.0.1 /index.php/User/send_tel_verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-13T19:46:33+08:00 ] 127.0.0.1 /index.php/User/send_tel_verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-13T19:46:34+08:00 ] 127.0.0.1 /index.php/User/send_tel_verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-03-13T19:46:38+08:00 ] 127.0.0.1 /index.php/User/send_tel_verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+

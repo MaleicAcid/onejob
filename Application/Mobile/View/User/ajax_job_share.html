@@ -1,0 +1,32 @@
+{__NOLAYOUT__}
+<empty name="lists">
+    <p id="no-ajax-content" style="text-align: center;font-size: 16px;color: #575151;padding: 15px 0 18px 0;">没有更多了</p>
+    <else />
+    <foreach name="lists" item="job" >
+        <a class="detail" href="#S&stu">
+            <div>
+                <span class="detail-ltxt">{$job['name']}</span>
+                <span class="detail-rtxt price">{$job['salary_low']}k~{$job['salary_high']}k</span>
+            </div>
+            <div>
+                <span class="detail-ltxt comName">{$job['c_name']}</span>
+                <span class="detail-rtxt date">03-01</span>
+            </div>
+            <div class="require">
+                <div>
+                    <img src="{$Think.config.MB_IMG_URL}icon/study.png" alt="">
+                    {$job['edu']}
+                </div>
+                <div>
+                    <img src="{$Think.config.MB_IMG_URL}icon/time.png" alt="">
+                    {$job['work_year']}
+                </div>
+                <div>
+                    <img src="{$Think.config.MB_IMG_URL}icon/person (2).png">
+                    {$job['need_people']}
+                </div>
+            </div>
+            <span onclick="cancle_share({$job['share_id']},this)" class="deleteBtn">删除</span>
+        </a>
+    </foreach>
+</empty>

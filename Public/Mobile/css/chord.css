@@ -1,0 +1,141 @@
+.comments{
+	padding: 0.5rem;
+	height: auto;
+	overflow: hidden;
+}
+.comments h3{
+	color: #2EACFD;
+    line-height: 2rem;
+    font-size: .9rem;
+    font-weight: normal;
+    border-bottom: #E2DCDC 1px solid;
+}
+.comments-text{
+	height: auto;
+	overflow: hidden;
+}
+.comments-text ul{
+	height: auto;
+	overflow: hidden;
+}
+.comments-text ul li{
+	height: auto;
+	overflow: hidden;
+	border-bottom: #E2DCDC 1px solid;
+	padding: 0.8rem 0;
+}
+.comments-pic{
+	width: 2.6rem;
+	height: 2.6rem;
+	overflow: hidden;
+	border-radius: 50%;
+	float: left;
+}
+.comments-pic img{
+	width: 100%;
+}
+.comments-name{
+	width: 50%;
+	height: 2.6rem;
+	float: left;
+	margin-left: 0.4rem;
+}
+.comments-name span{
+	height: 1.3rem;
+	width: 5rem;
+	font-size: 0.8rem;
+	line-height: 1.3rem;
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
+}
+.comments-name p{
+	height: 1.3rem;
+	width: 100%;
+	display: block;
+	font-size: 0.8rem;
+	line-height: 1.3rem;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: #666;
+}
+.comments-time{
+	width: 25%;
+	height: 2.6rem;
+	float: right;
+}
+.comments-time span{
+	height: 1.3rem;
+	width: 100%;
+	text-align: right;
+	font-size: 0.6rem;
+	line-height: 1.3rem;
+	display: block;
+	padding-right: 0.2rem;
+}
+.zhuanfa{
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	bottom: -50px;
+	left: 0;
+	background: #fff;
+	border-top: #E2DCDC 1px solid;
+	transition: .2s;
+}
+.zhuanfa div{
+	width: 80%;
+	height: 50px;
+	margin: 0 auto;
+	text-align: center;
+}
+.zhuanfa div a{
+	width: 33.33%;
+	height: 50px;
+	float: left;
+	display: block;
+}
+.zhuanfa div a img{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+
+.chord-validation{
+	height: 3rem;
+	line-height: 0.4rem;
+	border-bottom: #ddd 1px solid;
+	overflow: hidden;
+	margin-left: 5%;
+}
+.chord-validation input{
+	width: 60%;
+	height: 1.98rem;
+	float: left;
+	margin-top: 0.25rem;
+	border: none;
+	text-indent: 0.2rem;
+}
+.chord-validation .chord-validation-menu{
+	width: 20%;
+	height: 2.2rem;
+	float: right;
+	border: #ddd 1px solid;
+	margin-top: 0.25rem;
+	margin-right: 1.6rem;
+}
+.chord-validation-menu a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-bottom: none;
+	text-align: center;
+	line-height: 2rem;
+	text-decoration: none;
+	font-size: 0.22rem;
+	color: #999;
+}

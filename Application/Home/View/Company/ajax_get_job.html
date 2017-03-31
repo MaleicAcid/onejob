@@ -1,0 +1,32 @@
+{__NOLAYOUT__}
+<empty name="jobs">
+    <!--<p id="no-ajax-content" style="text-align: center;font-size: 16px;color: #575151;padding: 15px 0 18px 0;">没有更多了</p>-->
+    <else />
+    <foreach name="jobs" item="job" >
+        <li>
+            <a href="{:U('Company/edit_job',array('jid'=>$job['jid']))}">
+                <p>{$job['name']}</p>
+                <div class="C-listBox">
+                    <div class="C-classify">
+                        <i class=" icon-address-1"></i>
+                        <span>{$job['edu']}</span>
+                    </div>
+                    <div class="C-classify">
+                        <i class=" icon-doc-text-2"></i>
+                        <span>{$job['work_year']}</span>
+                    </div>
+                    <div class="C-classify">
+                        <i class="icon-users-outline"></i>
+                        <span>{$job['need_people']}</span>
+                    </div>
+                </div>
+            </a>
+            <div class="C-offon">
+                <if condition="($job['state'] eq 1) ">
+                <span class="C-off_hover" data-jid="{$job['jid']}" onclick="hide_or_show(this)"></span>
+                    <else /><span data-jid="{$job['jid']}" onclick="hide_or_show(this)"></span>
+                </if>
+            </div>
+        </li>
+    </foreach>
+</empty>

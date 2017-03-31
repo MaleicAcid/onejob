@@ -1,0 +1,44 @@
+{__NOLAYOUT__}
+<empty name="commentlist">
+    <p id="no-ajax-content" style="text-align: center;font-size: 16px;color: #575151;padding: 15px 0 18px 0;">没有更多了</p>
+    <else />
+<foreach name="commentlist" item="v" >
+    <li>
+        <div class="comments-pic">
+            <img src="{$v['head_pic']}"/>
+        </div>
+        <div class="comments-name">
+            <span>{$v['name']}</span>
+            <p>{$v['content']}</p>
+        </div>
+        <div class="comments-time">
+            <span>{$v['add_time']}</span>
+        </div>
+
+        <!--<li>-->
+            <!--<if condition="($v['reply'] neq null)">-->
+                <!--<div class="comments-pic">-->
+                    <!--<img src="{$v['reply']['logo']}"/>-->
+                <!--</div>-->
+                <!--<div class="comments-name">-->
+                    <!--<span>{$v['reply']['name']}</span>-->
+                    <!--<p>{$v['reply']['content']}</p>-->
+                <!--</div>-->
+                <!--<div class="comments-time">-->
+                    <!--<span>{$v['reply']['add_time']}</span>-->
+                <!--</div>-->
+                <!--<elseif condition="$is_author eq 1"/>-->
+
+                <!--<div onclick="showReply(this)" class="reply">回复</div>-->
+                <!--<div class="inp">-->
+                    <!--<form action="">-->
+                        <!--<input type="text" name="content">-->
+                        <!--<button type="submit">发送</button>-->
+                    <!--</form>-->
+                <!--</div>-->
+                <!--<else />-->
+            <!--</if>-->
+        <!--</li>-->
+    </li>
+</foreach>
+</empty>

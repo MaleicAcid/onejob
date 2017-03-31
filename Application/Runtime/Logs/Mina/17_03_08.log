@@ -1,0 +1,76 @@
+[ 2017-03-08T17:15:23+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0290s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 0 AND `pid` = 0 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 0 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0290s ]
+
+[ 2017-03-08T17:15:34+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 0 AND `pid` = 0 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 0 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0340s ]
+
+[ 2017-03-08T17:15:36+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 0 AND `pid` = 0 LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 0 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0300s ]
+
+[ 2017-03-08T17:16:38+08:00 ] 127.0.0.1 /index.php/Mina/JobShow/get_job_comment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `oj_comment` [ RunTime:0.0290s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 0 AND `pid` = 0 LIMIT 1   [ RunTime:0.0280s ]
+SQL: SELECT * FROM `oj_comment` WHERE `is_show` = 1 AND `job_id` = 0 AND `pid` = 0 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0290s ]
+
+[ 2017-03-08T19:02:52+08:00 ] 127.0.0.1 /index.php/Mina/User/collect_job/12
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: openid D:\TortoiseSVNspace\onejobtest\Application\Mina\Common\common.php 第 20 行.
+ERR: 参数错误或者未定义:jid
+
+[ 2017-03-08T19:03:03+08:00 ] 127.0.0.1 /index.php/Mina/User/collect_job/jid/12
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: openid D:\TortoiseSVNspace\onejobtest\Application\Mina\Common\common.php 第 20 行.
+
+[ 2017-03-08T19:03:14+08:00 ] 127.0.0.1 /index.php/Mina/User/collect_job/jid/12
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: openid D:\TortoiseSVNspace\onejobtest\Application\Mina\Common\common.php 第 20 行.
+

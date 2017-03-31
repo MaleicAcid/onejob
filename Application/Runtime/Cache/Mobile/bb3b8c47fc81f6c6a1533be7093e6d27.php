@@ -1,0 +1,97 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1 , minimum-scale=1.0 , maximum-scale=1.0 , user-scalable=no"/>
+	<title>Document</title>
+	<link rel="stylesheet" href="<?php echo (C("MB_CSS_URL")); ?>reset.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo (C("MB_CSS_URL")); ?>detail.css">
+	<style type="text/css">
+		.conPic{
+			display: block;
+			margin:.5rem auto;
+			border-radius: 50%;
+			border: 1px solid#E2DCDC;
+			width:25%;
+		}
+		.conName{display: block;text-align: center;}
+		.contact{
+			border-top: 1px solid #ddd;
+		}
+		.contact span{
+			width:80%;
+			margin-top: .5rem;
+    		line-height: 1.2rem;
+		}
+		.contact .conInfoDet{width: 20%;}
+		.introduce{
+			margin-top: -3.5rem;
+    		background-color: white;
+		}
+		.introduce h3{
+			border-bottom: 1px solid #ddd;
+		}
+		.introduce p{
+			line-height: 1.15rem;
+			margin-top: 1rem;
+		}
+	</style>
+	<script type="text/javascript" src="<?php echo (C("MB_JS_URL")); ?>global.js"></script></head>
+<body>
+	<div class="main">
+		<div class="header">
+			<div class="img">
+				<a href="javascript:history.go(-1)"><img src="<?php echo (C("MB_IMG_URL")); ?>icon/Left.png" alt=""></a>
+				<!--<img src="<?php echo (C("MB_IMG_URL")); ?>icon/wrong (1).png">-->
+			</div>
+			<div class="title">
+				<a href="<?php echo U('JobShow/index',array('jid'=>$to_jid));?>"><span>职位详情</span></a>
+				<span class="show">公司详情</span>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="banner"></div>
+
+			<div class="job">
+				<div class="newList">
+					<img src="<?php echo (C("MB_IMG_URL")); ?>icon/contact.png" class="conPic" alt="公司图片">
+					<span class="conName"><?php echo ($info['name']); ?></span>
+				</div>
+			</div>
+
+
+			<div class="contact">
+				<div class="conInfo">
+					<span class="conInfoDet">行业:</span>
+					<span><?php echo ($info['trade']); ?></span>
+				</div>
+				<div class="conInfo">
+					<span class="conInfoDet">性质:</span>
+					<span><?php echo ($info['invest']); ?></span>
+				</div>
+				<div class="conInfo">
+					<span class="conInfoDet">规模:</span>
+					<span><?php echo ($info['invest']); ?></span>
+				</div>
+			</div>
+
+			<div class="address">
+				<img src="<?php echo (C("MB_IMG_URL")); ?>icon/building.png" alt="">
+				<?php echo ($info['address']); ?>
+			</div>
+
+			<div class="banner" style="background-color: #ddd;"></div>
+
+			<div class="introduce">
+				<h3>公司介绍</h3>
+				<?php echo ($info['desc']); ?>
+				<!--<p>公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍</p>-->
+				<!--<p>公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍</p>-->
+				<!--<p>公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍</p>-->
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1 , minimum-scale=1.0 , maximum-scale=1.0 , user-scalable=no"/>
+	<title>Document</title>
+	<link rel="stylesheet" href="{$Think.config.MB_CSS_URL}reset.css"/>
+	<link rel="stylesheet" type="text/css" href="{$Think.config.MB_CSS_URL}mine.css">
+	<script type="text/javascript" src="{$Think.config.MB_JS_URL}global.js"></script>
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<div class="head">
+				<div class="icon">
+					<a href="javascript:history.go(-1)"><img src="{$Think.config.MB_IMG_URL}icon/Left (1).png" alt="" class="left"></a>
+					<!--<img src="{$Think.config.MB_IMG_URL}icon/wrong.png" class="wrong">-->
+				</div>
+				企业中心
+			</div>
+			<div class="person">
+				<div class="personIcon">
+					<img src="{$Think.config.MB_IMG_URL}3.png">
+				</div>
+				<div class="personName">{$company['short_name']}</div>
+				<a href="{:U('Company/edit_info')}"><span>个人资料</span></a>
+			</div>
+		</div>
+		<div class="container">
+			<div class="watch">
+				<a href="">
+					<div>
+						<span class="num">{$jobnum}</span>
+						<span class="watchName">已发布职位</span>
+					</div>
+				</a>
+				<a href="">
+					<div>
+						<span class="num">{$company['view_num']}</span>
+						<span class="watchName">浏览人数</span>
+					</div>
+				</a>
+				<a href="">
+					<div>
+						<span class="num">...</span>
+						<span class="watchName">浏览高校</span>
+					</div>
+				</a>
+			</div>
+
+
+			<div class="my">
+				<a href="">
+					<div>
+						<img src="{$Think.config.MB_IMG_URL}icon/package (1).png" alt="">
+						<span>职位管理</span>
+					</div>
+				</a>
+				<a href="">
+					<div>
+						<img src="{$Think.config.MB_IMG_URL}icon/icon_heart.png" alt="">
+						<span>我的收藏</span>
+					</div>
+				</a>
+				<a href="{:U('Company/identityAuth')}">
+					<div>
+						<img src="{$Think.config.MB_IMG_URL}icon/certification.png" alt="">
+						<span>企业认证</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="notice">
+				<img src="{$Think.config.MB_IMG_URL}icon/notice.png" alt="">
+				<a href="">通知：消息消息小心消息</a>
+			</div>
+
+
+			<div class="integration">
+				<img src="{$Think.config.MB_IMG_URL}icon/integration.png" alt="">
+				积分：{$company['point']}积分
+				<span class="right">
+					<img src="{$Think.config.MB_IMG_URL}icon/right.png" alt="">
+				</span>
+			</div>
+			<!--<div class="wallet">-->
+				<!--<img src="{$Think.config.MB_IMG_URL}icon/wallet.png" alt="">-->
+				<!--积分：999积分-->
+				<!--<span class="right">-->
+					<!--<a href="">点击充值</a>-->
+				<!--</span>-->
+			<!--</div>-->
+			<a style="float: right" href="{:U('Company/logout')}">退出登录</a>
+		</div>
+	</div>
+</body>
+</html>

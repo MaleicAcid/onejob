@@ -1,0 +1,488 @@
+
+    <div class="main">
+        <div class="information">
+            <div class="information-subNav">
+                <ul>
+                    <a href="{:U('Company/index')}"><li onclick="showDetail()"class="select"><i class=" icon-user-1"></i>企业资料</li></a>
+                    <li class="click-textarea"><i class="icon-wallet"></i>企业介绍</li>
+                    <a href="{:U('Company/manage_job')}"><li><i class="icon-window"></i>职位管理</li></a>
+                    <li><i class="icon-heart-empty"></i>我的收藏</li>
+                    <if condition="($company['state'] eq 1)">
+                        <a href="{:U('Company/show_identity')}"><li class="Enterprise-menu"><i class="icon-vimeo"></i>认证成功</li></a>
+                        <else />
+                        <a href="{:U('Company/show_identity')}"><li class="Enterprise-menu"><i class="icon-lock-7"></i>企业认证</li></a>
+                    </if>
+
+                    <li><i class="icon-database-2"></i>积分中心</li>
+                    <li><i class="icon-wallet"></i>钱包中心</li>
+
+                </ul>
+            </div>
+            <!--<div style="clear: both"></div>-->
+            <div class="information-content" style="overflow: hidden;height: auto;padding-bottom: 20px;">
+                <div class="data">
+                    <span>企业资料</span>
+                </div>
+                <div class="data-content">
+                    <div class="basicInformation">
+                        <input id="is_tel"  value="{$is_tel}" name="is_tel" type="hidden"/>
+                        <form id="identityAuth" action="" >
+                        <div>
+                            <input id="upload" style="display: none;" name="logo" type="file" accept="image/*;" />
+                            <img id="imghead" src="{$company['logo']}" alt="" width="60" height="60">
+
+                            <img src="{$Think.config.IMG_URL}level.png" alt="" class="level">
+                            <p><span>{$company['name']}</span><br></p>
+                            <div class="C-edit">
+                            	<span class="C-pic">
+                            		<a><img src="{$Think.config.IMG_URL}editor.png" alt="" class="editor"></a>
+                            	</span>
+                                <a id="edit">编辑</a>
+                            </div>
+                        </div>
+
+                        <div class="com-manage">
+
+                                <span><i class=" icon-user-7"></i><input type="text" id="name" name="name" placeholder="请输入企业名" value="{$company['name']}" disabled="disabled"/></span>
+                                <span><i class="  icon-mail"></i><input type="text" id="email" name="email" placeholder="简历投递邮箱" value="{$company['email']}" disabled="disabled"/></span>
+                                <span><i class=" icon-address-1"></i><input type="text" id="trade" name="trade" placeholder="请输入所属领域" value="{$company['trade']}" disabled="disabled"/></span>
+
+                            <span  >
+                                <i class=" icon-doc-text-2"></i>
+                                <select class="study" style="display: none" name="invest">
+                                    <foreach name="invest" item="v" >
+                                        <option name="invest">{$v}</option>
+                                     </foreach>
+                                </select>
+                                <span class="info-value">{$company['invest']}</span>
+                            </span>
+                            <!--<span class="info-value">{$user_info['sex']}</span>                            -->
+                            <span class="study">
+                                <i class="icon-users-outline"></i><select class="study" style="display: none" name="scale">
+                                <foreach name="scale" item="v" >
+                                    <option name="scale">{$v}</option>
+                                </foreach>
+                            </select>
+                                <span style="display:inline" class="info-value">{$company['scale']}</span>
+                            </span>
+                            <!--<span class="info-value">{$user_info['sex']}</span>-->
+                                <!--<span><i class=" icon-doc-text-2"></i><input type="text" id="invest" name="invest" placeholder="请选择投资类型" value="{$company['invest']}" disabled="disabled"/></span>-->
+                                <!--<span><i class="icon-users-outline"></i><input type="text" id="scale" name="scale" placeholder="请选择规模" value="{$company['scale']}" disabled="disabled"/></span>-->
+
+
+                            <span><i class="icon-location-outline"></i><input type="text" id="address" name="address" placeholder="请输入企业地址" value="{$company['address']}" disabled="disabled"/></span>
+
+
+                            <span style="width: 25%;"><i class=" icon-phone-outline"><input  id="mobile" name="mobile" type="text" value="{$company['tel']}" disabled="disabled"/></i></span>
+                            <if condition="$is_tel neq 1">
+                                <div class="Chorder-yanzhengma">
+                                    <input type="text" style="height:32px;" name="code" id="code"/>
+                                    <a href="javascript:send_sms()">获取验证码</a>
+
+                                </div>
+                                <a href="javascript:send_code()">绑定</a>
+                                <else />
+                            </if>
+
+                        </div>
+                        </form>
+                    </div>
+                    <div id="thediv" class="open-position">
+                        <ul>
+                            <li>
+                                <a href="{:U('Company/manage_job')}"><p class="n new">{$jobnum}</p></a>
+                                <a href="{:U('Company/manage_job')}"><p>已发布职位</p></a>
+
+                                <a onclick="is_complete_or_identity()" ><p class="new">一键发布</p></a>
+                            </li>
+                            <li>
+                                <p class="n">{$company['view_num']|default='...'}</p>
+                                <p>浏览人数</p>
+                            </li>
+                            <li>
+                                <p class="n">...</p>
+                                <p>浏览高校</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--<div class="C-list">-->
+                    <!--<ul id="add-content">-->
+                        <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<a href="Position_management.html">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<p>体验店课程——上海店</p>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<div class="C-listBox">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<div class="C-classify">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<i class=" icon-address-1"></i>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<span>0</span>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<div class="C-classify">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<i class=" icon-address-1"></i>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<span>1</span>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<div class="C-classify">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<i class=" icon-address-1"></i>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<span>0</span>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="C-offon">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span></span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <div class="C-textarea">
+                    <textarea id="desc" name="desc" placeholder="请输入介绍" style="">{$company['desc']}</textarea>
+                    <a href="javascript:update_desc()" class="animate-ok">确认</a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <include file="Public:footer" />
+</div>
+<script src="{$Think.config.JS_URL}jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="{$Think.config.BK_JS_URL}layer1/layer.js"></script>
+<script>
+    function is_complete_or_identity() {
+        $.ajax({
+            type: "get",
+//            data : {'desc':desc},
+            url: "{:U('Company/is_complete_or_identity')}",
+            success: function (data) {
+                var msg = '完善信息并通过认证后可发布职位！';
+                if (data.complete_code == 1 && data.identity_code == 1) {
+                    window.location.href ="{:U('Company/add_job')}"
+                    console.log('可发布');
+                    return;
+                }
+                if (data.complete_code != 1) {
+                    msg = msg + '</br>' + "<a  style='color: #00a0e9'>" + data.complete_msg + '</a>'
+                }
+
+                if (data.identity_code != 1) {
+                    msg = msg + '</br>' + "<a  style='color: #00a0e9' href={:U('Company/show_identity')}>" + data.identity_msg + '</a>'
+                }
+                layer.msg(msg,{
+//                    tips: 1,
+//                    offset: 't',
+                    shift: -1,
+//                    anim: 200,
+                    time: 2000
+                });
+                if (data.complete_code != 1) {
+//                    setTimeout(function () {
+//                        window.location.href ="{:U('Company/show_identity')}"
+//                    }, 2000);
+                }else if(data.identity_code != 1){
+                    setTimeout(function () {
+                        window.location.href ="{:U('Company/show_identity')}"
+                    }, 2000);
+                }else{
+                    window.location.href ="{:U('Company/add_job')}"
+                }
+
+            }
+        });
+    }
+
+
+
+        function update_desc() {
+        var desc = $("#desc").val();
+        var url = "{:U('Company/update_desc')}"
+        $.ajax({
+            type : "post",
+            data : {'desc':desc},
+            url: url,
+            success: function(data)
+            {
+                if(data.status == 1){
+                    location.reload()
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    }
+
+    function send_code() {
+        var code = $("#code").val();
+        var url = "{:U('Company/check_tel_verify')}"
+        $.ajax({
+            type : "get",
+            data : {'code':code},
+            url: url,
+            success: function(data)
+            {
+                if(data.status == 1){
+                    $('#is_tel').val(1);
+                    alert('绑定成功！请在刷新前保存其他资料信息！');
+//                    location.reload()
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    }
+    function send_sms() {
+        var mobile = $("#mobile").val();
+        var url = "{:U('Company/send_tel_verify')}"
+        $.ajax({
+            type : "get",
+            data : {'mobile':mobile},
+            url: url,
+            success: function(data)
+            {
+                if(data){
+                    alert(data.msg);
+
+                }else{
+                    alert(data.msg);
+//                           $("#mycomment").append(data);
+//                            page++;
+                }
+            }
+        });
+    }
+
+    function hide_or_show(obj) {
+        if(!$(obj).hasClass("C-off_hover")){
+            if(confirm("确定打开嘛？")){
+                do_show($(obj).attr('data-jid'),obj)
+            }
+        }else{
+            if(confirm("确定关闭嘛？")){
+                do_hide($(obj).attr('data-jid'),obj)
+            }
+        }
+    }
+
+    function do_show(jid,obj) {
+        var url = "{:U('Company/show_job')}";
+        $.ajax({
+            type : "get",
+            data : {'jid':jid},
+            url: url,
+            success: function(data)
+            {
+                if(data.status == 1){
+                    $(obj).addClass("C-off_hover");
+                }else{
+//                           $("#mycomment").append(data);
+//                            page++;
+                }
+            }
+        });
+    }
+    function do_hide(jid,obj) {
+        var url = "{:U('Company/hide_job')}";
+        $.ajax({
+            type : "get",
+            data : {'jid':jid},
+            url: url,
+            success: function(data)
+            {
+                if(data.status == 1){
+                    $(obj).removeClass("C-off_hover");
+                }else{
+//                           $("#mycomment").append(data);
+//                            page++;
+                }
+            }
+        });
+    }
+    function getObjectURL(file) {
+        var url = null ;
+        if (window.createObjectURL!=undefined) {
+            url = window.createObjectURL(file) ;
+        } else if (window.URL!=undefined) {
+            url = window.URL.createObjectURL(file) ;
+        } else if (window.webkitURL!=undefined) {
+            url = window.webkitURL.createObjectURL(file) ;
+        }
+        return url ;
+    }
+
+    $(function () {
+        $("#imghead").click(function(){
+            layer.msg('请选择2M以下的图片文件', {
+                offset: 't',
+                shift: -1,
+                anim: 15
+            });
+            $("#upload").click();
+        });
+        $("#upload").change(function(){
+            var objUrl = getObjectURL(this.files[0]) ;
+            $("#imghead").attr("src",objUrl);
+        });
+
+
+        $('.information-subNav li').click(function () {
+            $('.information-subNav li').removeClass('select');
+            $(this).addClass('select');
+        })
+
+        $(".click-textarea").click(function(){
+            $(".open-position").hide();
+            $(".C-list").hide();
+            $(".C-certification-box").hide();
+            $(".C-textarea").show();
+            $(".C-textarea").find("textarea").show();
+            $(".C-textarea").find("a").show();
+        });
+        $(".animate-ok").click(function(){
+            $(".open-position").show();
+            $(".C-list").show();
+            $(".C-textarea").find("textarea").hide();
+            $(".C-textarea").find("a").hide();
+        });
+
+        $(".C-edit a").click(function(){
+
+            if($("#edit").html()=="编辑"){
+                $(".com-manage").find("input").removeAttr("disabled").css("border","#ddd 1px solid");
+                $('.study').css({display:'inline-block'});
+                $('.info-value').css({display:'none'});
+                $("#edit").html("保存");
+            }else{
+
+                if($('#is_tel').val() != 1){
+                    alert('请先绑定手机')
+                    return;
+                }
+//                $(".C-edit a").html("编辑");
+//                $(".com-manage").find("input").attr("disabled","disabled").css("border","0");
+//                var name = $('#name').val()
+//                var email = $('#email').val()
+//                var trade = $('#trade').val()
+//                var invest = $('#invest').val()
+//                var scale = $('#scale').val()
+//                var address = $('#address').val()
+                var identityAuth = new FormData(document.getElementById("identityAuth"));
+                var url = "{:U('Home/Company/update_detail')}";
+                $.ajax({
+                    type : "post",
+//                    data : {name:name,email:email,trade:trade,invest:invest,scale:scale,address:address},
+                    data : identityAuth,
+                    processData:false,
+                    contentType:false,
+                    url: url,
+                    success: function(data)
+                    {
+                        if(data.status == 1) {
+                            location.reload()
+                        }else{
+                            alert(data.msg)
+                        }
+                    }
+                });
+            }
+        });
+
+        $(".C-offon span").click(function(){
+            if(!$(this).hasClass("C-off_hover")){
+                if(confirm("确定打开嘛？")){
+                    $(this).addClass("C-off_hover");
+                }
+            }else{
+                if(confirm("确定关闭嘛？")){
+                    $(this).removeClass("C-off_hover");
+                }
+            }
+        });
+
+//        $(".Enterprise-menu").click(function(){
+//            $(".open-position").hide();
+//            $(".C-list").hide();
+//            $(".C-textarea").hide();
+//            $(".C-certification-box").show();
+//            $(".C-certification-box form").show();
+//        });
+
+        $(".certification-menu ul li").click(function(){
+            $(this).addClass("certification-hover").siblings().removeClass("certification-hover");
+        });
+    })
+</script>
+    <script type="text/javascript">
+        var page = 1;
+        var reg ="no-ajax-content"; //匹配<p>标签判断获取的页面是否没有更多了
+        var newPage = true;
+        var url = "{:U('Company/get_company_job')}";
+        function get_company_job(){
+            //$('.get_more').show();
+            if(newPage){
+                $.ajax({
+                    type : "get",
+                    data : {'p':page,is_ajax:1},
+                    url: url,
+                    dataType:'html',
+                    success: function(data)
+                    {
+                        var tmp = data;
+                        if(data){
+                            //alert($(data).attr("id") );
+                            $("#add-content").append(data);
+                            page++;
+                            if(tmp.match(reg)){
+                                //如果是no-ajax-content则标记为false
+                                newPage = false;
+                            }
+                        }else{
+//                           $("#mycomment").append(data);
+//                            page++;
+                        }
+                    }
+                });
+            }
+
+        }
+        $(document).ready(function(){
+            get_company_job()
+
+        });
+        function getScrollTop(){
+            var scrollTop = 0, bodyScrollTop = 0, documentScrollTop = 0;
+            if(document.body){
+                bodyScrollTop = document.body.scrollTop;
+            }
+            if(document.documentElement){
+                documentScrollTop = document.documentElement.scrollTop;
+            }
+            scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+            return scrollTop;
+        }
+        //文档的总高度
+        function getScrollHeight(){
+            var scrollHeight = 0, bodyScrollHeight = 0, documentScrollHeight = 0;
+            if(document.body){
+                bodyScrollHeight = document.body.scrollHeight;
+            }
+            if(document.documentElement){
+                documentScrollHeight = document.documentElement.scrollHeight;
+            }
+            scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight;
+            return scrollHeight;
+        }
+        //浏览器视口的高度
+        function getWindowHeight(){
+            var windowHeight = 0;
+            if(document.compatMode == "CSS1Compat"){
+                windowHeight = document.documentElement.clientHeight;
+            }else{
+                windowHeight = document.body.clientHeight;
+            }
+            return windowHeight;
+        }
+        window.onscroll = function(){
+            if(getScrollTop() + getWindowHeight() == getScrollHeight()){
+                get_company_job();
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+[ 2017-03-14T20:40:58+08:00 ] 127.0.0.1 /index.php/onejobManage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-03-14T20:41:01+08:00 ] 127.0.0.1 /index.php/onejobmanage/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\TortoiseSVNspace\onejobtest\index.php 第 25 行.
+
+[ 2017-03-14T20:41:01+08:00 ] 127.0.0.1 /index.php/onejobmanage/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\TortoiseSVNspace\onejobtest\index.php 第 25 行.
+
+[ 2017-03-14T20:41:09+08:00 ] 127.0.0.1 /index.php/onejobmanage/Login/doLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 1 for I(), called in D:\TortoiseSVNspace\onejobtest\Application\Admin\Controller\LoginController.class.php on line 23 and defined D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 271 行.
+NOTIC: [8] Undefined variable: name D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 273 行.
+NOTIC: [8] Undefined variable: name D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 278 行.
+NOTIC: [8] Undefined variable: name D:\TortoiseSVNspace\onejobtest\ThinkPHP\Common\functions.php 第 339 行.
+SQL: SHOW COLUMNS FROM `oj_admin` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_admin` WHERE ( username = "admin" ) LIMIT 1   [ RunTime:0.0410s ]
+SQL: UPDATE `oj_admin` SET `login_ip`='127.0.0.1',`login_time`='1489495269' WHERE `id` = 4 [ RunTime:0.0360s ]
+
+[ 2017-03-14T20:41:09+08:00 ] 127.0.0.1 /index.php/onejobmanage/Login/verify.html?7259
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\TortoiseSVNspace\onejobtest\index.php 第 25 行.
+
+[ 2017-03-14T20:41:09+08:00 ] 127.0.0.1 /index.php/onejobmanage/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_user` WHERE ( type=1 ) LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_user` WHERE ( type=2 ) LIMIT 1   [ RunTime:0.0310s ]
+ERR: 1146:Table 'onejob.oj_resume' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `oj_resume`
+ERR: 1146:Table 'onejob.oj_resume' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `oj_resume`
+
+[ 2017-03-14T20:41:51+08:00 ] 127.0.0.1 /index.php/onejobmanage/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_user` [ RunTime:0.0340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_user` WHERE ( type=1 ) LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_user` WHERE ( type=2 ) LIMIT 1   [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `oj_job` [ RunTime:0.0320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_job` LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `oj_link` [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_link` LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_user` WHERE ( type=1 and state=1 ) LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_user` WHERE ( type=1 and state=0 ) LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_company` WHERE ( state=1 ) LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_company` WHERE ( state=2 ) LIMIT 1   [ RunTime:0.0300s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 102 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 109 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 137 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 153 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 160 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 166 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 175 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 182 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 191 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 198 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 207 行.
+NOTIC: [8] Undefined index: resume_total D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 283 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\TortoiseSVNspace\onejobtest\index.php 第 25 行.
+
+[ 2017-03-14T20:41:53+08:00 ] 127.0.0.1 /index.php/onejobmanage/Company/apply.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_company` WHERE `state` = 3 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_company` WHERE `state` = 3 LIMIT 0,100   [ RunTime:0.0310s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 102 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 109 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 137 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 153 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 160 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 166 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 175 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 182 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 191 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 198 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 207 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 468 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\TortoiseSVNspace\onejobtest\index.php 第 25 行.
+
+[ 2017-03-14T20:41:57+08:00 ] 127.0.0.1 /index.php/onejobmanage/Company/apply.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_company` WHERE `state` = 3 LIMIT 1   [ RunTime:0.0280s ]
+SQL: SELECT * FROM `oj_company` WHERE `state` = 3 LIMIT 0,100   [ RunTime:0.0290s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 102 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 109 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 137 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 153 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 160 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 166 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 175 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 182 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 191 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 198 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 207 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 468 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\TortoiseSVNspace\onejobtest\index.php 第 25 行.
+
+[ 2017-03-14T20:43:36+08:00 ] 127.0.0.1 /index.php/onejobmanage/Company/apply.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_company` WHERE `state` = 3 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT * FROM `oj_company` WHERE `state` = 3 LIMIT 0,100   [ RunTime:0.0330s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 102 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 109 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 137 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 153 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 160 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 166 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 175 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 182 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 191 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 198 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 207 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 468 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\TortoiseSVNspace\onejobtest\index.php 第 25 行.
+
+[ 2017-03-14T20:46:13+08:00 ] 127.0.0.1 /index.php/onejobmanage/Company/apply.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `oj_company` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `oj_company` WHERE `state` = 3 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `oj_company` WHERE `state` = 3 LIMIT 0,100   [ RunTime:0.0320s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 102 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 109 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 137 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 153 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 160 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 166 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 175 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 182 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 191 行.
+NOTIC: [8] Use of undefined constant ac - assumed 'ac' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 198 行.
+NOTIC: [8] Use of undefined constant company - assumed 'company' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 207 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\TortoiseSVNspace\onejobtest\Application\Runtime\Cache\Admin\784ea4e447c671f164b256e0d03f87c8.php 第 469 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+NOTIC: [2] ini_set(): A session is active. You cannot change the session module's ini settings at this time D:\TortoiseSVNspace\onejobtest\index.php 第 25 行.
+

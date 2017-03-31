@@ -1,0 +1,73 @@
+﻿
+	<div class="main">
+		<div class="information">
+			<div class="information-subNav">
+				<ul>
+					<li class="select"><i class=" icon-user-1"></i>企业资料</li>
+					<li><i class="icon-window"></i>职位管理</li>
+					<li><i class="icon-heart-empty"></i>我的收藏</li>
+					<li><i class="icon-lock-7"></i>企业认证</li>
+					<li><i class="icon-database-2"></i>积分中心</li>
+					<li><i class="icon-wallet"></i>钱包中心</li>
+				</ul>
+			</div>
+			<!--<div style="clear: both"></div>-->
+			<div class="information-content">
+				<div class="data">
+					<span>个人资料</span>
+				</div>
+				<div class="data-content">
+					<div class="basicInformation">
+						<div>
+							<img src="image/a.png" alt="" width="70" height="70">
+							<img src="image/level.png" alt="" class="level">
+							<p><span>阿里巴巴</span><br></p>
+							<img src="image/editor.png" alt="" class="editor">
+						</div>
+
+						<div class="com-manage">
+							<span><i class=" icon-user-7"></i>马云</span>
+							<span><i class=" icon-phone-outline"></i>18888888888</span>
+							<span><i class="  icon-mail"></i>8888@88.99</span>
+							<span><i class=" icon-address-1"></i>教育/培训</span>
+							<span><i class=" icon-doc-text-2"></i>合资</span>
+							<span><i class="icon-users-outline"></i>1000~9999</span>
+							<span><i class="icon-location-outline"></i>杭州市西溪</span>
+						</div>
+					</div>
+					<div class="open-position">
+						<ul>
+							<li>
+								<p class="n">5</p>
+								<p>已发布职位</p>
+								<p class="new">一键发布</p>
+							</li>
+							<li>
+								<p class="n">...</p>
+								<p>浏览人数</p>
+							</li>
+							<li>
+								<p class="n">...</p>
+								<p>浏览高校</p>
+							</li>
+						</ul>
+					</div>
+					<!--<div style="clear: both"></div>-->
+				</div>
+				<div style="clear: both"></div>
+			</div>
+		</div>
+	</div>
+	<include file="Public:footer" />
+</div>
+<script src="js/jquery-3.1.0.js"></script>
+<script>
+    $(function () {
+        $('.information-subNav li').click(function () {
+            $('.information-subNav li').removeClass('select');
+            $(this).addClass('select');
+        })
+    })
+</script>
+</body>
+</html>

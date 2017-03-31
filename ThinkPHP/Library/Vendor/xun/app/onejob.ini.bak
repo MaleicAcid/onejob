@@ -1,0 +1,14 @@
+project.name = onejob
+project.default_charset = utf-8
+server.index = 192.168.1.116:9393
+server.search = 192.168.1.116:9394
+
+
+[id]
+type = id
+
+[name]
+type = title
+
+[desc]
+type = body

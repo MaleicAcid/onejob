@@ -1,0 +1,72 @@
+
+    <div class="main" style="width: 100%">
+        <div class="login">
+            <div class="logon">
+                <div class="logon-c" id="role">
+                    <p>选择您的角色</p>
+                    <div>
+                        <img src="{$Think.config.IMG_URL}qiye.png" alt="" id="qiye">
+                        <img src="{$Think.config.IMG_URL}geren.png" alt="" id="geren">
+                    </div>
+                </div>
+                <div class="logon-c" id="way">
+                    <p>第三方一键登录</p>
+                    <div>
+                        <a href="javascript:company_open_qq()"><img src="{$Think.config.IMG_URL}qq.png" alt="" id="qq"></a>
+                        <a href="javascript:company_open_weixin()"><img src="{$Think.config.IMG_URL}wei.png" alt="" id="wei-1"></a>
+                    </div>
+                </div>
+                <div class="logon-c" id="way-1" style="display: none">
+                    <p>第三方一键登录</p>
+                    <div>
+                        <a href="javascript:user_open_qq()"><img src="{$Think.config.IMG_URL}qq.png" alt="" id="qq-1"></a>
+                        <a href="javascript:user_open_weixin()"><img src="{$Think.config.IMG_URL}wei.png" alt="" id="wei-1"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer" style="position: absolute;bottom: 0">
+        <div class="pro">
+            <div class="pro-content">
+                <img src="{$Think.config.IMG_URL}erweima.jpg" alt="">
+                <span>扫一扫微信小程序</span>
+                <p>电话咨询:<span>400-123-4564</span></p>
+            </div>
+        </div>
+        <div class="manage">
+            <p>Copyright © 2017 jyzd.com XXXXXXX有限公司 沪ICP备134679852号-1</p>
+            <p>联系地址：上海市XX区XX街道XX大楼XX号 联系电话：010-82585200</p>
+        </div>
+    </div>
+</div>
+<script src="{$Think.config.JS_URL}jquery-3.1.0.js"></script>
+
+<script type="text/javascript">
+function user_open_qq() {
+    window.open("{:U('LoginApi/login',array('oauth'=>'qq'))}");
+}
+function company_open_qq() {
+    window.open("{:U('LoginApi/login',array('oauth'=>'qq','identity'=>'company'))}");
+}
+function user_open_weixin() {
+    window.open("{:U('LoginApi/login',array('oauth'=>'weixin'))}");
+}
+function company_open_weixin() {
+    window.open("{:U('LoginApi/login',array('oauth'=>'weixin','identity'=>'company'))}");
+}
+</script>
+<script>
+    $(function () {
+        $('#qiye').click(function () {
+            $('#role').hide();
+            $('#way').show();
+        })
+        $('#geren').click(function () {
+            $('#role').hide();
+            $('#way-1').show();
+        })
+    })
+</script>
+</body>
+</html>

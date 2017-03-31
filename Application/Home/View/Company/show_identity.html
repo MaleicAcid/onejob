@@ -1,0 +1,176 @@
+<script src="{$Think.config.JS_URL}jquery-3.1.0.js"></script>
+<div class="main">
+    <div class="information">
+        <div class="information-subNav">
+            <ul>
+                <a href="{:U('Company/index')}"><li class=""><i class=" icon-user-1"></i>企业资料</li></a>
+                <li class="click-textarea"><i class="icon-wallet"></i>企业介绍</li>
+                <a href="{:U('Company/manage_job')}"><li><i class="icon-window"></i>职位管理</li></a>
+                <li><i class="icon-heart-empty"></i>我的收藏</li>
+                <a href="{:U('Company/show_identity')}"><li class="Enterprise-menu select"><i class="icon-lock-7"></i>企业认证</li></a>
+                <li><i class="icon-database-2"></i>积分中心</li>
+                <li><i class="icon-wallet"></i>钱包中心</li>
+
+            </ul>
+        </div>
+        <!--<div style="clear: both"></div>-->
+        <div class="C-certification-box">
+            <div class="certification-box">
+                <if condition="($data['state'] eq 4)">
+                    <div class="certification-menu" style="text-align: center;border: none;height: auto;">
+                        <img style="width: 160px;" src="{$data['licence']}" alt="">
+                        <p style="margin-top: 20px;font-size: 18px;">认证未通过</p>
+                        <p>失败原因:{$data['uncheck_title']}</p>
+                        <p>{$data['uncheck_content']}</p>
+
+                        <a  href="{:U('Company/identityAuth')}"><button style="border: none;color: #fff;background-color: #4472E7;width: 300px;height: 40px;margin-top: 40px;cursor: pointer;">重新认证<button></a>
+                    </div>
+                    <elseif condition="($data['state'] eq 3)"/>
+                    <div class="certification-menu" style="text-align: center;border: none;height: auto;">
+                        <img  style="width: 160px;" src="{$data['licence']}" alt="">
+                        <p style="margin-top: 20px;font-size: 18px;cursor: pointer;">认证审核中，请耐心等待...</p>
+                    </div>
+                    <elseif condition="($data['state'] eq 1)"/>
+                    <div class="certification-menu" style="text-align: center;border: none;height: auto;">
+                        <img style="width: 160px;" src="{$data['licence']}" alt="">
+                        <p style="margin-top: 20px;font-size: 18px;cursor: pointer;">认证通过</p>
+                    </div>
+                    <else />
+                    <div class="certification-menu" style="text-align: center;border: none;height: auto;">
+                        <img style="width: 160px;" src="{$data['licence']}" alt="">
+                        <p style="margin-top: 20px;font-size: 18px;cursor: pointer;">认证通过false</p>
+                    </div>
+                </if>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="C-textarea">
+        <textarea id="desc" name="desc" placeholder="请输入企业介绍" style="">{$company['desc']}</textarea>
+        <a href="javascript:update_desc()" class="animate-ok">确认</a>
+    </div>
+</div>
+<include file="Public:footer" />
+</div>
+
+<script>
+    function update_desc() {
+        var desc = $("#desc").val();
+        var url = "{:U('Company/update_desc')}"
+        $.ajax({
+            type : "post",
+            data : {'desc':desc},
+            url: url,
+            success: function(data)
+            {
+                if(data.status == 1){
+                    location.reload()
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    }
+    function update_pic() {
+        var link_pic = new FormData(document.getElementById("yourformid"));
+        var url = "{:U('Company/do_identity_auth')}"
+        $.ajax({
+            url : url,
+            type : 'post',
+            data : link_pic,
+            processData:false,
+            contentType:false,
+            success : function(res)
+            {
+                if(res.status == 1){
+                    location.reload();
+                }else {
+                    alert(res.msg)
+                }
+
+            }
+        });
+    }
+    $(function () {
+        $('.information-subNav li').click(function () {
+            $('.information-subNav li').removeClass('select');
+            $(this).addClass('select');
+        })
+
+        $(".click-textarea").click(function(){
+            $(".open-position").hide();
+            $(".C-list").hide();
+            $(".C-certification-box").hide();
+            $(".C-textarea").show();
+            $(".C-textarea").find("textarea").show();
+            $(".C-textarea").find("a").show();
+        });
+        $(".animate-ok").click(function(){
+            $(".open-position").show();
+            $(".C-list").show();
+            $(".C-textarea").find("textarea").hide();
+            $(".C-textarea").find("a").hide();
+        });
+
+        function edit_or_save() {
+            if($(".C-edit a").html()=="编辑"){
+                $(".com-manage").find("input").removeAttr("disabled").css("border","#ddd 1px solid");
+                $(".C-edit a").html("保存");
+            }
+        }
+        $(".C-edit a").click(function(){
+
+            if($(".C-edit a").html()=="编辑"){
+                $(".com-manage").find("input").removeAttr("disabled").css("border","#ddd 1px solid");
+                $(".C-edit a").html("保存");
+            }else{
+//                $(".C-edit a").html("编辑");
+//                $(".com-manage").find("input").attr("disabled","disabled").css("border","0");
+                var data = new FormData(document.getElementById("identityAuth"));
+                var url = "{:U('Company/update_detail')}";
+                $.ajax({
+                    type : "get",
+                    data : {'data':data},
+                    url: url,
+                    contentType:false,
+                    success: function(data)
+                    {
+                        if(data.status == 1) {
+                            window.location.reload;
+                        }else{
+                            alert(data.msg)
+                        }
+                    }
+                });
+            }
+        });
+
+        $(".C-offon span").click(function(){
+            if(!$(this).hasClass("C-off_hover")){
+                if(confirm("确定打开嘛？")){
+                    $(this).addClass("C-off_hover");
+                }
+            }else{
+                if(confirm("确定关闭嘛？")){
+                    $(this).removeClass("C-off_hover");
+                }
+            }
+        });
+
+//        $(".Enterprise-menu").click(function(){
+//            $(".open-position").hide();
+//            $(".C-list").hide();
+//            $(".C-textarea").hide();
+//            $(".C-certification-box").show();
+//            $(".C-certification-box form").show();
+//        });
+
+        $(".certification-menu ul li").click(function(){
+            $(this).addClass("certification-hover").siblings().removeClass("certification-hover");
+        });
+    })
+</script>
+</body>
+</html>

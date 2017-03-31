@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>my collection</title>
+	<meta name="viewport" content="width=device-width , initial-scale=1 , minimum-scale=1.0 , maximum-scale=1.0 , user-scalable=no"/>
+	<link rel="stylesheet" href="{$Think.config.MB_CSS_URL}reset.css"/>
+	<link rel="stylesheet" type="text/css" href="{$Think.config.MB_CSS_URL}index.css">
+	<link rel="stylesheet" type="text/css" href="{$Think.config.MB_CSS_URL}common.css">
+	<style type="text/css">
+		body{background-color: #fff;font-family: 'Microsoft YaHei';}
+	</style>
+</head>
+<body>
+<header class="blue">
+	<a href="javascript:history.go(-1)"><img src="{$Think.config.MB_IMG_URL}icon/Left (1).png" width="16px" height="16px"></img></a><span>我的分享</span>
+</header>
+<div class="content" id="add-content">
+	<empty name="lists">
+		<p id="no-ajax-content" style="text-align: center;font-size: 16px;color: #575151;padding: 15px 0 18px 0;">没有更多了</p>
+		<else />
+		<foreach name="lists" item="job" >
+	<a class="detail" href="#S&stu">
+		<div>
+			<span class="detail-ltxt">{$job['name']}</span>
+			<span class="detail-rtxt price">{$job['salary_low']}k~{$job['salary_high']}k</span>
+		</div>
+		<div>
+			<span class="detail-ltxt comName">{$job['c_name']}</span>
+			<span class="detail-rtxt date">03-01</span>
+		</div>
+		<div class="require">
+			<div>
+				<img src="{$Think.config.MB_IMG_URL}icon/study.png" alt="">
+				{$job['edu']}
+			</div>
+			<div>
+				<img src="{$Think.config.MB_IMG_URL}icon/time.png" alt="">
+				{$job['work_year']}
+			</div>
+			<div>
+				<img src="{$Think.config.MB_IMG_URL}icon/person (2).png">
+				{$job['need_people']}
+			</div>
+		</div>
+		<span onclick="cancle_share({$job['share_id']},this)" class="deleteBtn">删除</span>
+	</a>
+		</foreach>
+	</empty>
+</div>
+<script src="{$Think.config.MB_JS_URL}jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+    var com = document.getElementsByClassName('detail');
+    //var colIcon  =document.getElementsByClassName("deIcon");
+    var banner1 = document.getElementsByClassName("banner1")[0];
+    var content = document.getElementsByClassName("content")[0];
+    function init(){
+        if(!com[0]){
+            var textNode = document.createTextNode("暂无分享");
+            content.appendChild(textNode);
+            content.setAttribute("class","content none");
+            banner1.style.display="none";
+        }
+    }
+    init();
+    set_canale();
+	/*for(var i=0;i<com.length;i++){
+	 if(com){
+	 colIcon[i].addEventListener("click",function(e){
+	 e.preventDefault();
+	 if(this.getAttribute("src") == "img/icon/icon_heart.png"){
+	 this.setAttribute("src","img/icon/icon_heart (1).png");
+	 }else{
+	 this.setAttribute("src","img/icon/icon_heart.png");
+	 }
+	 },false);
+	 }
+	 }*/
+
+
+function set_canale() {
+    var expansion = null; //是否存在展开的list
+    var container = document.querySelectorAll('.detail');
+    var deleteBtn = document.querySelectorAll(".deleteBtn");
+    for(var i = 0; i < container.length; i++){
+        var x, y, X, Y, swipeX, swipeY;
+        container[i].addEventListener('touchstart', function(event) {
+            x = event.changedTouches[0].pageX;
+            y = event.changedTouches[0].pageY;
+            swipeX = true;
+            swipeY = true ;
+            if(expansion){ //判断是否展开，如果展开则收起
+                expansion.className = "detail";
+            }
+        });
+        container[i].addEventListener('touchmove', function(event){
+
+            X = event.changedTouches[0].pageX;
+            Y = event.changedTouches[0].pageY;
+            // 左右滑动
+            if(swipeX && Math.abs(X - x) - Math.abs(Y - y) > 0){
+                // 阻止事件冒泡
+                event.stopPropagation();
+                if(X - x > 10){ //右滑
+                    event.preventDefault();
+                    this.className = "detail"; //右滑收起
+                }
+                if(x - X > 10){ //左滑
+                    event.preventDefault();
+                    this.className = "detail swipeleft"; //左滑展开
+                    expansion = this;
+                }
+                swipeY = false;
+            }
+            // 上下滑动
+            if(swipeY && Math.abs(X - x) - Math.abs(Y - y) < 0) {
+                swipeX = false;
+            }
+        });
+}
+
+
+    }
+</script>
+<script type="text/javascript">
+    function cancle_share(sid,obj) {
+        $.ajax({
+            type : "get",
+            data : {'sid':sid},
+            url: "{:U('User/cancle_share')}",
+            success: function(data)
+            {
+                if(data.code == 1){
+                    //alert($(data).attr("id") );
+                    $(obj).parents('a').remove();
+                }else{
+//                           $("#mycomment").append(data);
+//                            page++;
+                }
+            }
+        });
+    }
+</script>
+<script type="text/javascript">
+    var page = 2;
+    var reg ="no-ajax-content"; //匹配<p>标签判断获取的页面是否没有更多了
+    var newPage = true;
+    var url = "{:U('User/job_share')}";
+    function job_share(){
+        //$('.get_more').show();
+        if(newPage){
+            $.ajax({
+                type : "get",
+                data : {'p':page,is_ajax:1},
+                url: url,
+                dataType:'html',
+                success: function(data)
+                {
+                    var tmp = data;
+                    if(data){
+                        //alert($(data).attr("id") );
+                        $("#add-content").append(data);
+                        set_canale();
+                        page++;
+                        if(tmp.match(reg)){
+                            //如果是no-ajax-content则标记为false
+                            newPage = false;
+                        }
+                    }else{
+//                           $("#mycomment").append(data);
+//                            page++;
+                    }
+                }
+            });
+        }
+
+    }
+    function getScrollTop(){
+        var scrollTop = 0, bodyScrollTop = 0, documentScrollTop = 0;
+        if(document.body){
+            bodyScrollTop = document.body.scrollTop;
+        }
+        if(document.documentElement){
+            documentScrollTop = document.documentElement.scrollTop;
+        }
+        scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+        return scrollTop;
+    }
+    //文档的总高度
+    function getScrollHeight(){
+        var scrollHeight = 0, bodyScrollHeight = 0, documentScrollHeight = 0;
+        if(document.body){
+            bodyScrollHeight = document.body.scrollHeight;
+        }
+        if(document.documentElement){
+            documentScrollHeight = document.documentElement.scrollHeight;
+        }
+        scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight;
+        return scrollHeight;
+    }
+    //浏览器视口的高度
+    function getWindowHeight(){
+        var windowHeight = 0;
+        if(document.compatMode == "CSS1Compat"){
+            windowHeight = document.documentElement.clientHeight;
+        }else{
+            windowHeight = document.body.clientHeight;
+        }
+        return windowHeight;
+    }
+    window.onscroll = function(){
+        if(getScrollTop() + getWindowHeight() == getScrollHeight()){
+            job_share();
+        }
+    };
+</script>
+</body>
+</html>

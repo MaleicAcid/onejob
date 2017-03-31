@@ -1,0 +1,112 @@
+@charset "utf-8";
+.job-section {
+  height: auto;
+  overflow: hidden;
+  width: 880px;
+  float: left;
+}
+.job-section ul {
+  height: auto;
+  overflow: hidden;
+}
+.job-section ul li {
+  height: auto;
+  overflow: hidden;
+  padding: 0 20px;
+  list-style: none;
+  background: #fff;
+  margin-bottom: 20px;
+  transition: all .5s;
+}
+.job-section ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+.job-section ul li .top-wrap {
+  margin-top: 10px;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+}
+.job-section ul li .top-wrap a {
+  font-size: 24px;
+  color: #333;
+  float: left;
+}
+.job-section ul li .top-wrap a:hover {
+  color: #2eacfd;
+}
+.job-section ul li .top-wrap span {
+  font-size: 24px;
+  color: #fd9e2e;
+  float: right;
+}
+.job-section ul li .center-wrap {
+  height: 30px;
+  line-height: 30px;
+  padding: 10px 0;
+  overflow: hidden;
+  font-size: 18px;
+  color: #666;
+  border-bottom: 1px solid #ddd;
+}
+.job-section ul li .bototm-wrap {
+  height: 30px;
+  line-height: 30px;
+  padding: 10px 0;
+  overflow: hidden;
+}
+.job-section ul li .bototm-wrap .condition-item {
+  float: left;
+  width: 25%;
+  font-size: 16px;
+  color: #666;
+}
+.tcdPageCode {
+  padding: 15px 20px;
+  text-align: left;
+  color: #ccc;
+  text-align: center;
+}
+.tcdPageCode a {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  color: #2eacfd;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  margin: 0 2px;
+  vertical-align: middle;
+}
+.tcdPageCode a:hover {
+  text-decoration: none;
+  border: 1px solid #2eacfd;
+}
+.tcdPageCode span.current {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 10px;
+  margin: 0 2px;
+  color: #fff;
+  background-color: #2eacfd;
+  border: 1px solid #2eacfd;
+  vertical-align: middle;
+}
+.tcdPageCode span.disabled {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 10px;
+  margin: 0 2px;
+  color: #bfbfbf;
+  background: #f2f2f2;
+  border: 1px solid #bfbfbf;
+  vertical-align: middle;
+}

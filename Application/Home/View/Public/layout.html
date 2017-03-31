@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>就业直达号</title>
+    <link rel="stylesheet" href="{$Think.config.CSS_URL}animation.css">
+    <link rel="stylesheet" href="{$Think.config.CSS_URL}fontello.css">
+    <link rel="stylesheet" href="{$Think.config.CSS_URL}reset.css">
+    <link rel="stylesheet" href="{$Think.config.CSS_URL}index.css">
+    <!--新建-->
+    <link rel="stylesheet" type="text/css" href="{$Think.config.CSS_URL}Chord.css"/>
+    <link rel="stylesheet" href="{$Think.config.CSS_URL}job_list.css" />
+
+    <!-- Piwik -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//123.56.73.180/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <!-- End Piwik Code -->
+
+</head>
+<body>
+<div id="app">
+    <div class="header">
+        <div class="user">
+            <if condition="$Think.session.user neq null">
+                <div id="msgCenter">
+                    <a href="#" >消息中心</a><i></i>
+                    <div id="msgInfo">
+                        <ul>
+                            <li>通知通知~</li>
+                            <li>通知通知~</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="{:U('Home/User/index')}">{$Think.session.user.realname|default='个人中心'}</a>
+                <a href="{:U('Home/User/logout')}">退出登录</a>
+            <elseif condition="$Think.session.company neq null"/>
+                <div id="msgCenter">
+                    <a href="#" >消息中心</a><i></i>
+                    <div id="msgInfo">
+                        <ul>
+                            <li>通知通知~</li>
+                            <li>通知通知~</li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="{:U('Home/Company/index')}">{$Think.session.company.name|default='企业中心'}</a>
+                <a href="{:U('Home/Company/logout')}">退出登录</a>
+                <else />
+                <div id="msgCenter">
+                    <a href="#" >消息中心</a><i></i>
+                    <div id="msgInfo">
+                        <ul>
+                            <li>通知通知~</li>
+                            <li>通知通知~</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--<a href="javascript:alert_msg()">消息中心</a>-->
+                <a href="{:U('Home/Users/login')}">快速登录</a>
+            </if>
+        </div>
+    </div>
+    <div class="navBg">
+        <div class="nav">
+            <div class="logo-img">
+                <img src="{$Think.config.IMG_URL}logo.jpg" alt="">
+            </div>
+            <ul>
+                <li>
+                    <a href="{:U('Home/Index/index')}">首页</a>
+                </li>
+                <li>
+                    <a href="{:U('Home/Index/companyList')}">企业</a>
+                </li>
+                <li>
+                    <a href="{:U('Home/Select/index',array('cate_id'=>291))}">互联网</a>
+                </li>
+                <li>
+                    <a href="{:U('Home/Select/index',array('cate_id'=>290))}">航运</a>
+                </li>
+                <li>
+                    <a href="{:U('Home/Select/index',array('cate_id'=>297))}">金融</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+{__CONTENT__}
+    <script type="text/javascript">
+        $(function () {
+            //消息中心显示
+            $('#msgCenter a').hover(
+                function () {
+                    $('#msgInfo').fadeIn();
+                    $('#msgCenter i').fadeOut();
+                },
+                function () {
+                    $('#msgInfo').fadeOut();
+                }
+            );
+
+
+        });
+    </script>
+    <script type="text/javascript">
+
+
+        function get_msg() {
+            var url = "{:U('Index/get_short_msg')}";
+            //alert(111)
+            $.ajax({
+                type : "get",
+                data : {is_ajax:1},
+                url: url,
+                success: function(data) {
+                    if (data) {
+                        console.log('成功')
+                        console.log(data)
+//                        网页加载判断是否有消息 修改
+                        // $('#msgCenter i').css({display:'inline-block'});
+                        var html="";
+                        $.each($.parseJSON(data), function(key, val){
+                            console.log(val['content'])
+                            html+="<li>"+val['content']+"</li>"
+
+                        });
+                        $("#msgInfo ul").empty(html);
+                        $("#msgInfo ul").append(html);
+                    }
+                },
+
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    console.log('出错')
+                    console.log(XMLHttpRequest.status);
+                    console.log(XMLHttpRequest.readyState);
+                    console.log(textStatus);
+
+                },
+            });
+        }
+//        get_msg()
+        var t1 = window.setInterval("get_msg()",20000);
+        //去掉定时器的方法
+        //        window.clearInterval(t1);
+    </script>

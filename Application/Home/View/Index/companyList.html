@@ -1,0 +1,118 @@
+
+    <div class="main">
+        <div class="companiesList-main">
+            <div class="companiesList-content">
+                <ul>
+                    <foreach name="companies" item="com" >
+                        <a href="{:U('Home/CompanyShow/index',array('id'=>$com['id']))}">
+                            <li>
+                                <div class="basicInformation">
+                                    <img src="{$com['logo']|get_img}" alt="">
+                                    <p>
+                                        <span>{$com['name']}</span><br>
+                                        <span><i class="icon-address-1"></i>{$com['trade']}</span>
+                                    </p>
+                                    <div class="com-manage">
+                                        <span><i class="icon-doc-text-2"></i>{$com['invest']}</span>
+                                        <span><i class=" icon-users-outline"></i>{$com['scale']}</span>
+                                        <span><i class="icon-location-outline"></i>{$com['address']}</span>
+                                    </div>
+                                </div>
+                                <div class="num">
+                                    <p>{$com['view_num']}</p>
+                                    <span>阅览量</span>
+                                </div>
+                            </li>
+                        </a>
+                    </foreach>
+                </ul>
+                <ul id ="add-content"></ul>
+            </div>
+            <div class="companiesList-subNav">
+                <ul>
+                    <li>热门企业</li>
+                    <foreach name="hot_com" item="c" >
+                        <a href="{:U('CompanyShow/index',array('id'=>$c['id']))}""><span href="{:U('CompanyShow/index',array('id'=>$c['id']))}" style="text-align:center;display: block;height: 10px;line-height: 5;">{$c['name']}</span></a>
+                        <li><a href="{:U('CompanyShow/index',array('id'=>$c['id']))}"><img  style="width:150px;" src="{$c['logo']}" alt=""></a></li>
+                    </foreach>
+                </ul>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+    <script src="{$Think.config.JS_URL}jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript">
+        var page = 2;
+        var reg ="no-ajax-content"; //匹配<p>标签判断获取的页面是否没有更多了
+        var newPage = true;
+        function get_remindList(){
+            //$('.get_more').show();
+            if(newPage){
+                $.ajax({
+                    type : "get",
+                    url: "__ROOT__/index.php/Home/Index/get_company_list/is_ajax/1/p/"+page,
+                    dataType:'html',
+                    success: function(data)
+                    {
+                        var tmp = data;
+                        if(data){
+                            //alert($(data).attr("id") );
+                            $("#add-content").append(data);
+                            page++;
+                            if(tmp.match(reg)){
+                                //如果是no-ajax-content则标记为false
+                                newPage = false;
+                            }
+                        }else{
+//                           $("#mycomment").append(data);
+//                            page++;
+                        }
+                    }
+                });
+            }
+
+        }
+        function getScrollTop(){
+            var scrollTop = 0, bodyScrollTop = 0, documentScrollTop = 0;
+            if(document.body){
+                bodyScrollTop = document.body.scrollTop;
+            }
+            if(document.documentElement){
+                documentScrollTop = document.documentElement.scrollTop;
+            }
+            scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+            return scrollTop;
+        }
+        //文档的总高度
+        function getScrollHeight(){
+            var scrollHeight = 0, bodyScrollHeight = 0, documentScrollHeight = 0;
+            if(document.body){
+                bodyScrollHeight = document.body.scrollHeight;
+            }
+            if(document.documentElement){
+                documentScrollHeight = document.documentElement.scrollHeight;
+            }
+            scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight;
+            return scrollHeight;
+        }
+        //浏览器视口的高度
+        function getWindowHeight(){
+            var windowHeight = 0;
+            if(document.compatMode == "CSS1Compat"){
+                windowHeight = document.documentElement.clientHeight;
+            }else{
+                windowHeight = document.body.clientHeight;
+            }
+            return windowHeight;
+        }
+        window.onscroll = function(){
+            if((getScrollTop() + getWindowHeight()== getScrollHeight())){
+                get_remindList();
+            }
+        };
+    </script>
+    <include file="Public:footer" />
+</div>
+</body>
+</html>

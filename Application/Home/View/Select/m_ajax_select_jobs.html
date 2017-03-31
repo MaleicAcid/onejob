@@ -1,0 +1,27 @@
+{__NOLAYOUT__}
+<empty name="jobs">
+    <p id="no-ajax-content" style="text-align: center;font-size: 16px;color: #575151;padding: 15px 0 18px 0;">没有更多职位了</p>
+    <else />
+    <foreach name="jobs" item="job" >
+        <li class="job-item">
+            <div class="top-wrap">
+                <a href="{:U('JobShow/index',array('jid'=>$job['jid']))}">{$job['name']}</a>
+                <span>{$job['salary_low']}k~{$job['salary_high']}k</span>
+            </div>
+            <div class="center-wrap">
+                {$job['c_name']}
+            </div>
+            <div class="bototm-wrap">
+                <div class="condition-item">
+                    <i class="icon-doc-text-2"></i>{$job['edu']}
+                </div>
+                <div class="condition-item">
+                    <i class="icon-users-outline"></i>{$job['need_people']}人
+                </div>
+                <div class="condition-item">
+                    <i class="icon-location-outline"></i>{$job['work_year']}
+                </div>
+            </div>
+        </li>
+    </foreach>
+</empty>

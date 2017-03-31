@@ -1,0 +1,47 @@
+{__NOLAYOUT__}
+<empty name="commentlist">
+    <p id="no-ajax-content" style="text-align: center;font-size: 16px;color: #575151;padding: 15px 0 18px 0;">没有更多了</p>
+    <else />
+<foreach name="commentlist" item="v" >
+<div class="comment-list">
+    <div class="userName">
+        <div class="userIcon">
+            <img src="{$v['head_pic']}" alt="">
+            <span>{$v['name']}</span>
+        </div>
+        <div class="userTime">
+            <span>{$v['add_time']}</span>
+        </div>
+    </div>
+    <div class="comment-content">
+    <p>{$v['content']}</p>
+    </div>
+    <div>
+        <if condition="($v['reply'] eq null) AND ($is_author eq 1)">
+            <!--<div onclick="showReply(this)" class="reply">回复</div>-->
+            <div class="inp">
+                    <input type="hidden" value="{$v['comment_id']}" id="comment_pid" name="content_pid">
+                    <input type="text" id="reply_content" name="content">
+                    <button onclick="reply_submit()" style="margin-left:0;"type="submit">回复</button>
+            </div>
+            <elseif condition="$v['reply'] neq null"/>
+            <div class="userName">
+                <div class="userIcon">
+                    <img src="{$v['reply']['logo']}" alt="">
+                    <span>{$v['reply']['name']}</span>
+                </div>
+                <div class="userTime">
+                    <span>{$v['reply']['add_time']}</span>
+                </div>
+            </div>
+            <div class="comment-content">
+                <p>{$v['reply']['content']}</p>
+            </div>
+
+            <else />
+        </if>
+    </div>
+</div>
+<hr>
+</foreach>
+</empty>
